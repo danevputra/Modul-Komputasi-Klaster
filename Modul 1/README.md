@@ -14,7 +14,7 @@ Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk dio
    Kekurangan dari Oracle
    - DBMS yang paling rumit dan paling mahal di dunia. Penggunaannya memakan banyak biaya, mulai dari device sampai diperlukannya DBA yang handal.
 2. MySQL<br><br><img src= "https://cdns.klimg.com/merdeka.com/i/w/news/2021/03/03/1280790/540x270/mysql-adalah-sistem-manajemen-berbasis-data-ketahui-cara-kerjanya.png" style="height:90px;width:auto"><br><br>
-     adalah singkatan “My Structured Query Language”. Program ini berjalan sebagai server menyediakan multi-user mengakses ke sejumlah database. multithread, multi-user, dengan sekitar 6 juta instalasi di seluruh dunia. MySQL AB gratis, dibawah lisensi GNU General Public License (GPL), tetapi ada juga MySQL yang berbayar.<br><br>
+     MYSQL adalah singkatan “My Structured Query Language”. Program ini berjalan sebagai server menyediakan multi-user mengakses ke sejumlah database. multithread, multi-user, dengan sekitar 6 juta instalasi di seluruh dunia. MySQL AB gratis, dibawah lisensi GNU General Public License (GPL), tetapi ada juga MySQL yang berbayar.<br><br>
     Kelebihan MySQL
     - Free Stabil dan tangguh
     - Fleksibel dengan berbagai pemrograman
