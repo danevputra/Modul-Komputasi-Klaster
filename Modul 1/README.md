@@ -83,7 +83,9 @@ Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk dio
         Database canggih datang dengan dukungan untuk pengguna, dikelola yaitu dengan koneksi hak akses set ke database dan tabel. Mengingat tujuan dan sifat SQLite (tidak digunakan untuk pengguna multi/banyak), fitur ini tidak ada.
      - Kurangnya kemungkinan untuk bekerja dengan kinerja tambahan<br>
         Sesuai dengan namanya SQLite mengutamakan kesederhanaan dan portabilitas, jadi SQLite tidak mungkin untuk bekerja dengan untuk mendapatkan banyak tambahan kinerja. Karena SQLite kesederhanaan, secara teknis tidak mungkin untuk membuatnya berkinerja lebih.
-        
+
+Dan masih banyak lagi jenis-jenis produk database, khusus di mata kuliah ini kita akan menggunakan Database MySQL
+
 ## Install XAMPP
 1. Download XAMPP terbaru<br>
     Silakan Download XAMPP terbaru untuk Windows di sini ([Download](https://downloadsapachefriends.global.ssl.fastly.net/8.1.1/xampp-windows-x64-8.1.1-2-VS16-installer.exe))
@@ -103,6 +105,12 @@ Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk dio
     Proses Instalasi mungkin memakan waktu beberapa menit.<br><img src="https://webhostmu.com/media/image-26.png">
 9. Start XAMPP<br>
     Jika sudah muncul jendela seperti di bawah ini, klik tombol Finish untuk menyelesaikannya. Selain itu, akan muncul opsi apakah Anda mau langsung menjalankan aplikasi XAMPP atau tidak. Jika ya, maka centang opsi tersebut.<br><img src="https://webhostmu.com/media/image-27.png">
+10. Cara Menjalankan Aplikasi XAMPP<br>
+    Bukalah aplikasi XAMPP, bisa melalui Start Menu atau Desktop, dan klik icon XAMPP.<br>
+    Atau, jika Anda ingin membukanya langsung begitu proses instalasi selesai, maka centang kotak “Do you want to start the Control Panel now?” seperti terlihat pada gambar no. #9 di atas.<br>
+    Setelah terbuka, silahkan klik tombol Start pada kolom Action sehingga tombol tersebut berubah menjadi Stop. Dengan mengklik tombol tersebut, artinya itulah aplikasi yang dijalankan. Biasanya jika saya menggunakan XAMPP, yang saya start hanyalah aplikasi Apache dan MySQL, karena saya tidak memerlukan aplikasi seperti Filezilla, dan lain-lain.<br><img src="https://webhostmu.com/media/image-28.png"><br><img src="https://webhostmu.com/media/image-29.png">
+    Sekarang bukalah browser kesukaan Anda, dan coba ketikkan http://localhost/ di address bar. Jika muncul tampilan seperti gambar di bawah ini, instalasi telah berhasil.<br><img src="https://webhostmu.com/media/image-30.png">
+11. Jika Anda mengalami kesulitan di dalam menjalankan XAMPP seperti Apache XAMPP tidak bisa berjalan, mungkin bisa membaca artikel ini: [Mengatasi Error pada XAMPP](https://webhostmu.com/apache-tidak-bisa-running-di-xampp/)
 
 ## Query Sederhana
 ## Generate Big Data
