@@ -117,7 +117,13 @@ Sebenarnya untuk MySQL dan Apache kita dapat menginstallnya secara independen (t
 Selanjutnya cobalah untuk masuk ke halaman ```localhost/phpmyadmin``` Jika diminta username dan password maka masukkan username root dan password dapat dikosongkan (default)<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28205823/mysql-phpmyadmin-5-1536x796.png" style="height:400px;width:auto"><br><br>
 Pada halaman inilah, Anda dapat melakukan pengelolaan database untuk website Anda. Misalnya, membuat database, mengedit, menghapus, bahkan melakukan query data.
 ### A. Membuat Database
+1. Pada bagian kiri localhost/phpMyAdmin, silahkan klik New untuk membuat database baru.<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28205951/mysql-phpmyadmin-6.png" style="height:300px;width:auto"><br><br>
+2. Masukkan nama database pada kolom yang tersedia. Pada tutorial ini, kami menggunakan database_baru sebagai nama database yang akan dibuat. Jika sudah diberi nama, klik Create.<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28210018/mysql-phpmyadmin-7.png" style="height:400px;width:auto"><br><br>
+3. Nantinya, database baru yang Anda buat akan tampil di bagian kiri halaman phpMyAdmin. Sekarang, Anda sudah bisa menambahkan tabel sebagai tempat penyimpanan data pada database baru.
 ### B. Membuat Tabel
+1. Kali ini, mari membuat tabel dengan empat kolom untuk data pengguna dengan nama tabel users.  Kemudian, klik tombol Go.<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28210149/mysql-phpmyadmin-8.png" style="height:400px;width:auto"><br><br>
+2. Di bagian ini, Anda harus memasukkan nama kolom dan tipe datanya. Untuk tabel users, kami membuat kolom id, name, email, dan address. Jika sudah terisi seperti gambar di bawah ini, klik tombol Save.<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28210210/mysql-phpmyadmin-9-1536x867.png" style="height:400px;width:auto"><br><br>
+3. Sekarang, Anda sudah memiliki database dengan tabel users yang siap dipakai dan dihubungkan dengan website Anda.<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28210258/mysql-phpmyadmin-10-1536x354.png" style="height:400px;width:auto"><br><br>
 ### C. Query Sederhana
 ## 4. Generate Big Data
 ## 5. Query Nilai Siswa dari Big Data
@@ -128,3 +134,4 @@ https://catatanshand.blogspot.com/2018/01/pengertian-fungsi-dan-macam-macam-jeni
 http://belajarlazarus.blogspot.com/2016/08/inilah-kelebihan-dan-kekurangan-sqlite.html <br>
 https://glints.com/id/lowongan/kelebihan-kekurangan-mongodb/#.YeLNQfgxVPY <br>
 https://webhostmu.com/cara-install-xampp/ <br>
+https://www.niagahoster.co.id/blog/cara-membuat-database-di-mysql/ <br>
