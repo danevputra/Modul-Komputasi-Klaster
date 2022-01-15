@@ -114,6 +114,11 @@ Sebenarnya untuk MySQL dan Apache kita dapat menginstallnya secara independen (t
 11. Jika Anda mengalami kesulitan di dalam menjalankan XAMPP seperti Apache XAMPP tidak bisa berjalan, mungkin bisa membaca artikel ini: [Mengatasi Error pada XAMPP](https://webhostmu.com/apache-tidak-bisa-running-di-xampp/)
 
 ## 3. Query Sederhana
+Selanjutnya cobalah untuk masuk ke halaman ```localhost/phpmyadmin``` Jika diminta username dan password maka masukkan username root dan password dapat dikosongkan (default)<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28205823/mysql-phpmyadmin-5-1536x796.png" style="height:200px;width:auto"><br><br>
+Pada halaman inilah, Anda dapat melakukan pengelolaan database untuk website Anda. Misalnya, membuat database, mengedit, menghapus, bahkan melakukan query data.
+### A. Membuat Database
+### B. Membuat Tabel
+### C. Query Sederhana
 ## 4. Generate Big Data
 ## 5. Query Nilai Siswa dari Big Data
 ## Referensi
