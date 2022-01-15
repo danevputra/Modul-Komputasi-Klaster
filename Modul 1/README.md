@@ -6,6 +6,7 @@ Database atau basis data adalah kumpulan data yang dikelola sedemikian rupa berd
 Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk diolah lebih lanjut yang biasanya diambil dari tabel tabel dalam database. Pengertian query yang lain adalah pertanyaan (question) atau permintaan (order) informasi tertentu daru sebuah database yang tertulis dalam format tertentu.
 ### Jenis Database
 1. Oracle
+   Test
 2. MySQL
 3. Visual Foxpro
 4. Postgre SQL
