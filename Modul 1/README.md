@@ -1,10 +1,10 @@
 # Database & Query
-## Konsep
-### Pengertian Database
+## 1. Konsep
+### A. Pengertian Database
 Database atau basis data adalah kumpulan data yang dikelola sedemikian rupa berdasarkan ketentuan tertentu yang saling berhubungan sehingga mudah dalam pengelolaannya. Melalui pengelolaan tersebut pengguna dapat memperoleh kemudahan dalam mencari informasi, menyimpan informasi dan membuang informasi.
-### Pengertian Query
+### B. Pengertian Query
 Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk diolah lebih lanjut yang biasanya diambil dari tabel tabel dalam database. Pengertian query yang lain adalah pertanyaan (question) atau permintaan (order) informasi tertentu daru sebuah database yang tertulis dalam format tertentu.
-### Contoh Produk Database
+### C. Contoh Produk Database
 1. Oracle RDBMS<br><br><img src= "https://www.fujitsu.com/lu/Images/oracle-db580x224_tcm67-40873.jpg" style="height:90px;width:auto"><br><br>
     Oracle adalah relational database management system (RDBMS) untuk mengelola informasi secara terbuka, komprehensif dan terintegrasi. Biasa digunakan untuk pengaksesan data yang dilakukan secara online. Dirancang khusus untuk organisasi berukuran besar, bukan untuk ukuran kecil dan menengah.<br><br>
    Kelebihan dari Oracle
@@ -86,7 +86,7 @@ Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk dio
 
 Dan masih banyak lagi jenis-jenis produk database, khusus di mata kuliah ini kita akan menggunakan Database MySQL
 
-## Install XAMPP
+## 2. Install XAMPP
 Sebenarnya untuk MySQL dan Apache kita dapat menginstallnya secara independen (terpisah), namun pada awal perkuliahan ini, untuk memudahkan dalam memahami materi, kita gunakan XAMPP terlebih dahulu, karena di dalamnya sudah termasuk beberapa sub-aplikasi yang kita perlukan, seperti Apache dan MySQL, dan berikut cara instalasinya : <br>
 1. Download XAMPP terbaru<br>
     Silakan Download XAMPP terbaru untuk Windows di sini ([Download](https://downloadsapachefriends.global.ssl.fastly.net/8.1.1/xampp-windows-x64-8.1.1-2-VS16-installer.exe))
@@ -113,9 +113,9 @@ Sebenarnya untuk MySQL dan Apache kita dapat menginstallnya secara independen (t
     Sekarang bukalah browser kesukaan Anda, dan coba ketikkan http://localhost/ di address bar. Jika muncul tampilan seperti gambar di bawah ini, instalasi telah berhasil.<br><img src="https://webhostmu.com/media/image-30.png">
 11. Jika Anda mengalami kesulitan di dalam menjalankan XAMPP seperti Apache XAMPP tidak bisa berjalan, mungkin bisa membaca artikel ini: [Mengatasi Error pada XAMPP](https://webhostmu.com/apache-tidak-bisa-running-di-xampp/)
 
-## Query Sederhana
-## Generate Big Data
-## Query Nilai Siswa dari Big Data
+## 3. Query Sederhana
+## 4. Generate Big Data
+## 5. Query Nilai Siswa dari Big Data
 ## Referensi
 https://idcloudhost.com/kamus-hosting/query/ <br>
 https://www.dicoding.com/blog/apa-itu-database/ <br>
