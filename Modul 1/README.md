@@ -15,6 +15,6 @@ Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk dio
 ## Generate Big Data
 ## Query Nilai Siswa dari Data
 ## Referensi
-https://idcloudhost.com/kamus-hosting/query/
-https://www.dicoding.com/blog/apa-itu-database/
-https://catatanshand.blogspot.com/2018/01/pengertian-fungsi-dan-macam-macam-jenis-database.html
+https://idcloudhost.com/kamus-hosting/query/ <br>
+https://www.dicoding.com/blog/apa-itu-database/ <br>
+https://catatanshand.blogspot.com/2018/01/pengertian-fungsi-dan-macam-macam-jenis-database.html <br>
