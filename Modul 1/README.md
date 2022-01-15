@@ -85,6 +85,17 @@ Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk dio
         Sesuai dengan namanya SQLite mengutamakan kesederhanaan dan portabilitas, jadi SQLite tidak mungkin untuk bekerja dengan untuk mendapatkan banyak tambahan kinerja. Karena SQLite kesederhanaan, secara teknis tidak mungkin untuk membuatnya berkinerja lebih.
         
 ## Install XAMPP
+1. Download XAMPP terbaru<br>
+    Silakan Download XAMPP terbaru untuk Windows di sini ([Download](https://downloadsapachefriends.global.ssl.fastly.net/8.1.1/xampp-windows-x64-8.1.1-2-VS16-installer.exe))
+2. Buka file XAMPP yang baru saja diunduh
+3. Klik Next pada jendela installer
+4. Pilih aplikasi yang ingin di install
+5. Pilih folder instalasi
+6. Pilih bahasa
+7. Jalankan instalasi
+8. Tunggu proses instalasi selesai
+9. Start XAMPP
+
 ## Query Sederhana
 ## Generate Big Data
 ## Query Nilai Siswa dari Big Data
@@ -92,3 +103,5 @@ Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk dio
 https://idcloudhost.com/kamus-hosting/query/ <br>
 https://www.dicoding.com/blog/apa-itu-database/ <br>
 https://catatanshand.blogspot.com/2018/01/pengertian-fungsi-dan-macam-macam-jenis-database.html <br>
+http://belajarlazarus.blogspot.com/2016/08/inilah-kelebihan-dan-kekurangan-sqlite.html <br>
+https://glints.com/id/lowongan/kelebihan-kekurangan-mongodb/#.YeLNQfgxVPY <br>
