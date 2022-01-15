@@ -122,7 +122,7 @@ Pada halaman inilah, Anda dapat melakukan pengelolaan database untuk website And
 3. Nantinya, database baru yang Anda buat akan tampil di bagian kiri halaman phpMyAdmin. Sekarang, Anda sudah bisa menambahkan tabel sebagai tempat penyimpanan data pada database baru.
 ### B. Membuat Tabel
 1. Kali ini, mari membuat tabel dengan empat kolom untuk data pengguna dengan nama tabel users.  Kemudian, klik tombol Go.<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28210149/mysql-phpmyadmin-8.png" style="height:300px;width:auto"><br><br>
-2. Di bagian ini, Anda harus memasukkan nama kolom dan tipe datanya. Untuk tabel users, kami membuat kolom id, name, email, dan address. Jika sudah terisi seperti gambar di bawah ini, klik tombol Save.<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28210210/mysql-phpmyadmin-9-1536x867.png" style="height:400px;width:auto"><br><br>
+2. Di bagian ini, Anda harus memasukkan nama kolom dan tipe datanya. Untuk tabel users, kami membuat kolom id, name, email, dan address. Jika sudah terisi seperti gambar di bawah ini, klik tombol Save.<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28210210/mysql-phpmyadmin-9-1536x867.png" style="height:500px;width:auto"><br><br>
 3. Sekarang, Anda sudah memiliki database dengan tabel users yang siap dipakai dan dihubungkan dengan website Anda.<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28210258/mysql-phpmyadmin-10-1536x354.png" style="height:200px;width:auto"><br><br>
 ### C. Query Sederhana
 ## 4. Generate Big Data
