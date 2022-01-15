@@ -20,7 +20,7 @@ Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk dio
 ## Install XAMPP
 ## Query Sederhana
 ## Generate Big Data
-## Query Nilai Siswa dari Data
+## Query Nilai Siswa dari Big Data
 ## Referensi
 https://idcloudhost.com/kamus-hosting/query/ <br>
 https://www.dicoding.com/blog/apa-itu-database/ <br>
