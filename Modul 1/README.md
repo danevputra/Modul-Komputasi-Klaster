@@ -68,7 +68,22 @@ Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk dio
      - Kurang unggul dalam hal ketersediaan fungsi built-in.
      - Replikasi di PostgreSQL belum disertakan dalam distribusi standarnya yang terbatas hanya bisa melakukan penambahan kolom, penggantian nama kolom, dan penggantian nama tabel.
 
-6. SQLite
+5. SQLite<br><br><img src= "https://blog.desdelinux.net/wp-content/uploads/2020/05/Sqlite.jpeg" style="height:90px;width:auto"><br><br>
+    SQLite merupakan sebuah sistem manajemen basisdata relasional yang bersifat ACID-compliant dan memiliki ukuran pustaka kode yang relatif kecil, ditulis dalam bahasa C. SQLite merupakan proyek yang bersifat public domain yang dikerjakan oleh D. Richard Hipp.<br><br>
+     Kelebihan SQLite
+     - Berbasis file<br>
+        Seluruh database terdiri dari satu file pada disk, yang membuatnya sangat portabel.
+     - Terstandarisasi dengan baik<br>
+        Meskipun mungkin tampak seperti sebuah  implementasi DB yang "sederhana", SQLite menggunakan SQL yang tentunya kita sudah tahu bahwa SQL itu sudah sangat terstandar dengan baik.
+     - Sangat baik untuk pengambangan dan bahkan pengujian<br>
+        SQLite, dengan basis fitur yang kaya, dapat menawarkan lebih dari apa yang dibutuhkan untuk pembangunan dengan kesederhanaan bekerja dengan satu file dan terkait pustaka bahasa C.
+
+     Kekurangan SQLite
+     - Tidak ada manajemen pengguna<br>
+        Database canggih datang dengan dukungan untuk pengguna, dikelola yaitu dengan koneksi hak akses set ke database dan tabel. Mengingat tujuan dan sifat SQLite (tidak digunakan untuk pengguna multi/banyak), fitur ini tidak ada.
+     - Kurangnya kemungkinan untuk bekerja dengan kinerja tambahan<br>
+        Sesuai dengan namanya SQLite mengutamakan kesederhanaan dan portabilitas, jadi SQLite tidak mungkin untuk bekerja dengan untuk mendapatkan banyak tambahan kinerja. Karena SQLite kesederhanaan, secara teknis tidak mungkin untuk membuatnya berkinerja lebih.
+        
 ## Install XAMPP
 ## Query Sederhana
 ## Generate Big Data
