@@ -5,8 +5,8 @@ Database atau basis data adalah kumpulan data yang dikelola sedemikian rupa berd
 ### Pengertian Query
 Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk diolah lebih lanjut yang biasanya diambil dari tabel tabel dalam database. Pengertian query yang lain adalah pertanyaan (question) atau permintaan (order) informasi tertentu daru sebuah database yang tertulis dalam format tertentu.
 ### Jenis Database
-1. Oracle<br>
-    Oracle adalah relational database management system (RDBMS) untuk mengelola informasi secara terbuka, komprehensif dan terintegrasi. Biasa digunakan untuk pengaksesan data yang dilakukan secara online. Dirancang khusus untuk organisasi berukuran besar, bukan untuk ukuran kecil dan menengah.<br>
+1. Oracle<br><br><img src= "https://www.fujitsu.com/lu/Images/oracle-db580x224_tcm67-40873.jpg"><br><br>
+    Oracle adalah relational database management system (RDBMS) untuk mengelola informasi secara terbuka, komprehensif dan terintegrasi. Biasa digunakan untuk pengaksesan data yang dilakukan secara online. Dirancang khusus untuk organisasi berukuran besar, bukan untuk ukuran kecil dan menengah.<br><br>
    Kelebihan dari Oracle
    - Banyak fitur yang dapat memenuhi tuntutan fleksibilitas dari organisasi besar.
    - Dapat mendayagunakan lebih dari satu server serta data storage dengan mudah dan transparan.
