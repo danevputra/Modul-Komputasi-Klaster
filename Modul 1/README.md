@@ -87,6 +87,7 @@ Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk dio
 Dan masih banyak lagi jenis-jenis produk database, khusus di mata kuliah ini kita akan menggunakan Database MySQL
 
 ## Install XAMPP
+Sebenarnya untuk MySQL dan Apache kita dapat menginstallnya secara independen (terpisah), namun pada awal perkuliahan ini, untuk memudahkan dalam memahami materi, kita gunakan XAMPP terlebih dahulu, karena di dalamnya sudah termasuk beberapa sub-aplikasi yang kita perlukan, seperti Apache dan MySQL, dan berikut cara instalasinya : <br>
 1. Download XAMPP terbaru<br>
     Silakan Download XAMPP terbaru untuk Windows di sini ([Download](https://downloadsapachefriends.global.ssl.fastly.net/8.1.1/xampp-windows-x64-8.1.1-2-VS16-installer.exe))
 2. Buka file XAMPP yang baru saja diunduh<br>
@@ -121,3 +122,4 @@ https://www.dicoding.com/blog/apa-itu-database/ <br>
 https://catatanshand.blogspot.com/2018/01/pengertian-fungsi-dan-macam-macam-jenis-database.html <br>
 http://belajarlazarus.blogspot.com/2016/08/inilah-kelebihan-dan-kekurangan-sqlite.html <br>
 https://glints.com/id/lowongan/kelebihan-kekurangan-mongodb/#.YeLNQfgxVPY <br>
+https://webhostmu.com/cara-install-xampp/ <br>
