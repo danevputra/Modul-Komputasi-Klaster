@@ -87,14 +87,22 @@ Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk dio
 ## Install XAMPP
 1. Download XAMPP terbaru<br>
     Silakan Download XAMPP terbaru untuk Windows di sini ([Download](https://downloadsapachefriends.global.ssl.fastly.net/8.1.1/xampp-windows-x64-8.1.1-2-VS16-installer.exe))
-2. Buka file XAMPP yang baru saja diunduh
-3. Klik Next pada jendela installer
-4. Pilih aplikasi yang ingin di install
-5. Pilih folder instalasi
-6. Pilih bahasa
-7. Jalankan instalasi
-8. Tunggu proses instalasi selesai
-9. Start XAMPP
+2. Buka file XAMPP yang baru saja diunduh<br>
+    Kadang pada proses ini muncul pesan error. Jika ada, abaikan saja dan lanjutkan dengan klik YES dan OK.<br><img src="https://webhostmu.com/media/image-19.png"><br><img src="https://webhostmu.com/media/image-20.png">
+3. Klik Next pada jendela installer<br>
+    Pada tahapan ini seringkali muncul jendela yang isinya meminta Anda menutup semua aplikasi yang sedang berjalan. Jika semua aplikasi sudah ditutup, maka klik tombol Next.<br><img src="https://webhostmu.com/media/image-21.png">
+4. Pilih sub-aplikasi yang ingin di install<br>
+    Pada tahapan ini, Anda akan diminta untuk memilih sub-aplikasi yang mau diinstal. Centang saja semua pilihan dan klik tombol Next.<br><img src="https://webhostmu.com/media/image-22.png">
+5. Pilih folder instalasi<br>
+    Pastikan kapasitas hardisk atau drive tempat Xampp mau di install masih tersedia kuota yang mencukupi.<br><img src="https://webhostmu.com/media/image-23.png">
+6. Pilih bahasa<br>
+    Gunakan bahasa yang Anda familiar dengannya, kemudian klik Next.<br><img src="https://webhostmu.com/media/image-24.png">
+7. Jalankan instalasi<br>
+    Klik Next jika Anda sudah siap memulai proses instalasi Xampp.<br><img src="https://webhostmu.com/media/image-25.png">
+8. Tunggu proses instalasi selesai<br>
+    Proses Instalasi mungkin memakan waktu beberapa menit.<br><img src="https://webhostmu.com/media/image-26.png">
+9. Start XAMPP<br>
+    Jika sudah muncul jendela seperti di bawah ini, klik tombol Finish untuk menyelesaikannya. Selain itu, akan muncul opsi apakah Anda mau langsung menjalankan aplikasi XAMPP atau tidak. Jika ya, maka centang opsi tersebut.<br><img src="https://webhostmu.com/media/image-27.png">
 
 ## Query Sederhana
 ## Generate Big Data
