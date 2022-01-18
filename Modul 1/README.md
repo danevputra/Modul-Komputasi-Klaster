@@ -137,6 +137,9 @@ Selanjutnya dengan kedua tabel tersebut kita akan mencoba mencari hubungan antar
 2. Maka kita akan mendapatkan hasil query sebagai berikut<br><br><img src= "img/12.JPG"><br><br>
 ## 4. Generate Big Data
 ## 5. Query Nilai Siswa dari Big Data
+Dari data tersebut kita akan mencoba untuk mencari relasi antara id siswa, nama siswa, nrp, id mapel, dan nilai
+1. Agar kita tidak perlu melakukan join setiap saat maka kita dapat membuat view, dengan query sebagai berikut <br> ```CREATE VIEW soal_jawaban AS SELECT Jawaban.id_siswa, Siswa.nama, Siswa.nrp, Siswa.id_kota, Jawaban.value, Soal.jawaban_benar, Soal.id_mapel FROM Jawaban INNER JOIN Soal on Jawaban.id_soal = Soal.id INNER JOIN Siswa ON Jawaban.id_siswa = Siswa.id;```
+2. Maka kita akan mendapatkan sebuah tabel baru bernama soal_jawaban yang dapat kita olah lagi menjadi nilai dengan cara sebagai berikut
 ## Referensi
 https://idcloudhost.com/kamus-hosting/query/ <br>
 https://www.dicoding.com/blog/apa-itu-database/ <br>
