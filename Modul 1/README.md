@@ -124,6 +124,13 @@ Pada halaman inilah, Anda dapat melakukan pengelolaan database untuk website And
 1. Kali ini, mari membuat tabel dengan empat kolom untuk data pengguna dengan nama tabel users.  Kemudian, klik tombol Go.<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28210149/mysql-phpmyadmin-8.png" style="height:300px;width:auto"><br><br>
 2. Di bagian ini, Anda harus memasukkan nama kolom dan tipe datanya. Untuk tabel users, kami membuat kolom id, name, email, dan address. Jika sudah terisi seperti gambar di bawah ini, klik tombol Save.<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28210210/mysql-phpmyadmin-9-1536x867.png" style="height:500px;width:auto"><br><br>
 3. Sekarang, Anda sudah memiliki database dengan tabel users yang siap dipakai.<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/09/28210258/mysql-phpmyadmin-10-1536x354.png" style="height:200px;width:auto"><br><br>
+4. Selanjutnya kita akan memasukkan data ke dalam tabel users, silakan klik kolom insert pada header phpmyadmin <br><br><img src= "img/1.JPG"><br><br>
+5. Isikan dengan data sebagai berikut<br><br><img src= "img/4.JPG"><br><br><img src= "img/5.JPG"><br><br><img src= "img/6.JPG"><br><br>
+6. Apabila pada komputer kalian tidak bisa memasukkan data lebih dari 2, silakan scroll ke bawah dan tambahkan jumlah data<br><br><img src= "img/2.JPG"><br><br>dan jangan lupa untuk tidak mencentang bagian ignore di bagian atas tiap kolom input data<br><br><img src= "img/6.JPG"><br><br>
+7. Terakhir tekan tombol go<br><br><img src= "img/7.JPG"><br><br>
+8. Maka data sudah masuk ke dalam tabel<br><br><img src= "img/8.JPG"><br><br>
+9. Selanjutnya, kita akan membuat tabel bernama penjualan dengan cara seperti di atas, dan kolom sebagai berikut<br><br><img src= "img/9.JPG"><br><br>
+10. Dan masukkan data sebagai berikut dengan cara melalui halaman insert phpmyadmin<br><br><img src= "img/10.JPG"><br><br>
 ### C. Query Sederhana
 ## 4. Generate Big Data
 ## 5. Query Nilai Siswa dari Big Data
