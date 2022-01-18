@@ -80,7 +80,7 @@ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download
 
 ## Program Python
 Jika sudah berhasil melakukan semua langkah, terakhir jalankan program berikut
-```
+```python
 import mysql.connector as connection
 import time
 import pandas as pd
