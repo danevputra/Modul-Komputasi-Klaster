@@ -132,6 +132,8 @@ Pada halaman inilah, Anda dapat melakukan pengelolaan database untuk website And
 9. Selanjutnya, kita akan membuat tabel bernama penjualan dengan cara seperti di atas, dan kolom sebagai berikut<br><br><img src= "img/9.JPG"><br><br>
 10. Dan masukkan data sebagai berikut dengan cara melalui halaman insert phpmyadmin<br><br><img src= "img/10.JPG"><br><br>
 ### C. Query Sederhana
+Selanjutnya dengan kedua tabel tersebut kita akan mencoba mencari hubungan antara nama user, alamat user, dan jumlah barang yang dibeli.
+1. Kita dapat menggunakan query sebagai berikut <br><br><img src= "img/11.JPG"><br><br>Penjelasan :<br>a. ```SELECT``` : merupakan perintah dalam mysql untuk menampilkan data<br>b. ```users.name``` : digunakan untuk mengambil nilai pada kolom nama dari tabel users<br>c. ```pembelian.jml_barang``` : digunakan untuk mengambil data dari kolom jml_barang pada tabel pembelian<br>d. ```FROM 'users'``` : mengambil data dari tabel users<br>e. ```INNER JOIN pembelian``` : Menggabungkan dengan tabel pembelian<br>f. ```ON users.id=pembelian.id_user``` : tabel users dan pembelian akan digabungkan dengan memperhatikan nilai yang sama dari kolom id pada tabel users dan kolom id_user dari tabel pembelian
 ## 4. Generate Big Data
 ## 5. Query Nilai Siswa dari Big Data
 ## Referensi
