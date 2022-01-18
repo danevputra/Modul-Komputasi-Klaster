@@ -34,7 +34,7 @@ Karena mau menggunakan SQL maka harus install SQL service, disini menggunakan Ma
 3. sudo mysql_secure_installation
 4. sudo mariadb --version (jika berjalan maka mariadb sudah terinstall)
 5. Jalankan commands
-```
+```bash
 cd /var/lib/mysql
 ls
 rm -r *
@@ -70,7 +70,7 @@ Adapula beberapa library yang diperlukan untuk run program python yang diberikan
 Untuk mendapatkan DB yang telah disiapkan maka perlu dilakukan download dari google drive dengan command 
 
 1. 
-```
+```bash
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1oIB6H7KsGQcz2OEVlVWD6oKttmCNsWk-' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1oIB6H7KsGQcz2OEVlVWD6oKttmCNsWk-" -O cbtjatimsm.tar.gz && rm -rf /tmp/cookies.txt
 ```
 2. tar -xvf cbtjatimsm.tar.gz 
