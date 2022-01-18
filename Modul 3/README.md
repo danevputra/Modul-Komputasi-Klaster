@@ -32,7 +32,7 @@ Karena mau menggunakan SQL maka harus install SQL service, disini menggunakan Ma
 1. sudo apt update
 2. sudo apt-get install mariadb-server
 3. sudo mysql_secure_installation
-4. sudo mariadb --version
+4. sudo mariadb --version (jika berjalan maka mariadb sudah terinstall)
 5. Jalankan commands
 ```
 cd /var/lib/mysql
@@ -43,26 +43,19 @@ systemctl restart mysqld
 systemctl restart mysql.service
 systemctl restart mariadb
 mysql -uroot
+CREATE USER 'klaster'@'%' IDENTIFIED BY 'Klaster123';
+GRANT ALL ON *.* TO 'cluster'@'%';
+FLUSH PRIVILEGES;
+quit;
 ```
-
-Apabila sudah menunjukan versi dari mariadb, maka sudah berhasil
-
-Referensi : 
-https://pimylifeup.com/raspberry-pi-mysql/
 
 ## Install Python
 Untuk menjalankan program script yang diberikan oleh Bapak Dwi, diperlukan python maka dilakukan installasi python
 
 1. sudo apt-get update
-2. sudo apt-get install python3.8 python3-pip
-3. sudo python --version 
-4. sudo pip --version
-
-Pastikan python dan pip sudah terinstall
-
-
-Referensi : https://realpython.com/installing-python/
-
+2. sudo apt-get install python3.9 python3-pip
+3. sudo python --version (jika berjalan maka python berhasil diinstall)
+4. sudo pip --version (jika berjalan maka pip berhasil diinstall)
 
 ## Install Library tambahan
 
@@ -83,10 +76,65 @@ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download
 2. tar -xvf cbtjatimsm.tar.gz 
 3. Pindah ke root (sudo -i), 
 4. mv hasil export ke root
-5. Jalankan command 
-6. Lalu melakukan import database yang telah didownload kedalam MariaDB server, ikuti langkah yang ada di Readme (Didalam hasil export cbtjatimsm.tar.gz)
+5. Lalu melakukan import database yang telah didownload kedalam MariaDB server, ikuti langkah yang ada di Readme (Didalam hasil export cbtjatimsm.tar.gz)
 
 ## Program Python
+Jika sudah berhasil melakukan semua langkah, terakhir jalankan program berikut
+```
+import mysql.connector as connection
+import time
+import pandas as pd
+import psutil
+from bounded_pool_executor import BoundedProcessPoolExecutor
+import warnings
+
+warnings.filterwarnings("ignore")
+
+
+def loadDB(id_kota):
+    t = time.time()
+    try:
+        mydb = connection.connect(host="Localhost",
+                                  database='CBT_JATIM',
+                                  user="klaster",
+                                  password="Klaster123", use_pure=True)
+
+        query = 'select id_siswa, nama, nrp, value, jawaban_benar, id_mapel from soal_jawaban where id_kota=%d;' % id_kota
+        ujian_siswa = pd.read_sql(query, mydb)
+
+        mydb.close()  # close the connection
+    except Exception as e:
+        mydb.close()
+        print(str(e))
+
+    elapsed = time.time() - t
+    print("Time Load DB  = {:.3f}".format(elapsed))
+    ujian_siswa.loc[ujian_siswa['value'] ==
+                    ujian_siswa['jawaban_benar'], ['score']] = 1
+    ujian_siswa = ujian_siswa.fillna(0)
+    result = ujian_siswa.groupby(['id_siswa', 'nama', 'nrp', 'id_mapel'])[
+        'score'].agg('sum')
+    # result = ujian_siswa.groupby(['id_siswa'])['score'].sum()
+    result.to_csv("id_kota_%d.csv" % id_kota)
+
+
+if __name__ == '__main__':
+
+    tAll = time.time()
+    n_jobs = psutil.cpu_count()
+    print("Ready to worker")
+    cnt = 0
+    with BoundedProcessPoolExecutor(max_workers=n_jobs) as worker:
+        for id_kota in range(1,2):
+            print('#%d Worker initialization %s' % (cnt, id_kota))
+            cnt += 1
+            print("Load DB %d, please wait ..." % id_kota)
+            worker.submit(loadDB, id_kota)
+    elapsed = time.time() - tAll
+    print("Time selesai  = {:.3f}".format(elapsed))
+```
 
 ## Referensi
 https://www.wartaekonomi.co.id/read366664/apa-itu-bahasa-pemrograman-python<br>
+https://pimylifeup.com/raspberry-pi-mysql/<br>
+https://realpython.com/installing-python/<br>
