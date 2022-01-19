@@ -62,7 +62,6 @@ def loadDB(id_kota):
                     ujian_siswa['jawaban_benar'], ['score']] = 1
     ujian_siswa = ujian_siswa.fillna(0)
     result = ujian_siswa.groupby(['id_siswa', 'nama', 'nrp', 'id_mapel'])['score'].agg('sum')
-    # result = ujian_siswa.groupby(['id_siswa'])['score'].sum()
     result.to_csv("id_kota_%d.csv" % id_kota)
 
 
@@ -101,7 +100,18 @@ Penjelasan :
 17. ```elapsed = time.time() - t``` : menghitung waktu yang dibutuhkan untuk load data dari database dengan cara mengurangi waktu saat ini dengan waktu yang ada di variabel t
 18. ```print("Time Load DB  = {:.3f}".format(elapsed))``` : Menampilkan waktu yang diperlukan untuk melakukan load database
 19. ```ujian_siswa.loc[ujian_siswa['value'] == ujian_siswa['jawaban_benar'], ['score']] = 1``` : apabila ```ujian_siswa['value']``` yang merupakan jawaban dari siswa sama dengan ```ujian_siswa['jawaban_benar']``` yang merupakan kunci jawaban, maka nilai ```score``` dijadikan 1
-20. ```ujian_siswa = ujian_siswa.fillna(0)``` : fungsi ini bertujuan untuk mengubah field yang kosong menjadi angka 0
+20. ```ujian_siswa = ujian_siswa.fillna(0)``` : fungsi ini bertujuan untuk mengubah field yang null menjadi angka 0, adanya field yang null ini akibat jawaban dari siswa salah
+21. ``` result = ujian_siswa.groupby(['id_siswa', 'nama', 'nrp', 'id_mapel'])['score'].agg('sum')``` : bertujuan untuk melakukan grouping (setelah penilaian selesai maka jumlah skor dari siswa akan ditambahkan dan pada akhirnya akan mendapatkan nilai dari siswa tersebut)
+22. ```result.to_csv("id_kota_%d.csv" % id_kota)``` : berfungsi untuk mencetak hasil ke dalam file csv dengan nama file sesuai id kota yang sedang di query
+23. ```if __name__ == '__main__':``` : deklarasi fungsi main
+24. ```tAll = time.time()``` : berfungsi untuk mencatat waktu awal program berjalan
+25. ```n_jobs = psutil.cpu_count()``` : mendefinisikan jumlah job yang dapat berjalan pada satu waktu tertentu, bergantung pada jumlah core yang ada pada perangkat
+26. ```cnt = 0``` : Variabel counter jumlah worker
+27. ```with BoundedProcessPoolExecutor(max_workers=n_jobs) as worker:``` : Memanggil fungsi BoundedProcessPoolExecutor dengan jumlah pekerja sesuai jumlah core processor dan memberikan alias worker
+28. ```for id_kota in range(x,y):``` : untuk id_kota pada rentang x hingga y lakukan perulangan (ketika run program x dan y silakan diganti dengan id_kota misal ```range(1,5)```)
+29. ```worker.submit(loadDB, id_kota)``` : memanggil fungsi loadDB dan mengirimkan id_kota dengan menggunakan BoundedProcessPoolExecutor
+30. ```elapsed = time.time() - tAll``` : untuk menghitung waktu yang diperlukan dalam menjalankan program
+31. ```print("Time selesai  = {:.3f}".format(elapsed))``` : print waktu yang diperlukan untuk menjalankan program
 
 ## Mengolah Nilai dengan Raspberry
 
