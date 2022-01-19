@@ -1,9 +1,18 @@
-# Mengolah Nilai dengan Python
+# Mengolah Data dengan Python
 
 ## Konsep
 ### Pengertian Python
 <br><br><img src= "https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png" style="height:90px;width:auto"><br><br>
 Python, salah satu bahasa pemrograman paling populer di dunia, telah menciptakan segalanya mulai dari algoritma rekomendasi Netflix hingga software yang mampu mengontrol mobil yang bisa mengemudi sendiri. Python adalah bahasa pemrograman yang dirancang untuk digunakan dalam berbagai aplikasi, termasuk ilmu data, pengembangan software dan website, otomatisasi, serta umumnya mampu menyelesaikan pekerjaan lainnya.
+
+## Instalasi VnC
+Apabila melakukan koneksi melalui SSH hanya diberikan tampilan terminal, apabila menggunakan VnC bisa mendapatkan tampilan GUI. yang perlu dilakukan adalah
+
+1. Download VnC Viewer
+2. Lakukan Installasi
+3. Login menggunakan klasterdti@gmail.com
+4. Password menggunakan klasterdti1959
+5. Lakukan koneksi ke salah satu Node
 
 ## Koneksi VPN
 Dikarenakan Raspberry yang berada di lab KCKS yang menggunakan jaringan dari ITS, maka untuk melakukan koneksi SSH diperlukan VPN dan juga one-time-password yang bisa didapatkan dari website my.its.ac.id
@@ -15,16 +24,6 @@ Dikarenakan Raspberry yang berada di lab KCKS yang menggunakan jaringan dari ITS
 5. Download OpenVPN
 6. Import konfigurasi OpenVPN 
 7. Selesai
-
-## Installasi VnC
-Apabila melakukan koneksi melalui SSH hanya diberikan tampilan terminal, apabila menggunakan VnC bisa mendapatkan tampilan GUI. yang perlu dilakukan adalah
-
-1. Download VnC Viewer
-2. Lakukan Installasi
-3. Login menggunakan klasterdti@gmail.com
-4. Password menggunakan klasterdti1959
-5. Lakukan koneksi ke salah satu Node
-
 
 ## Install MariaDB
 Karena mau menggunakan SQL maka harus install SQL service, disini menggunakan MariaDB
@@ -133,6 +132,10 @@ if __name__ == '__main__':
     elapsed = time.time() - tAll
     print("Time selesai  = {:.3f}".format(elapsed))
 ```
+
+## Install Python pada Windows
+1. Download software python disini ([Download](https://www.python.org/downloads/))  sesuaikan dengan versi windows yang anda gunakan.
+2. Double click pada software python yang telah didownload.<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2020/12/cara-install-python-39-img2.png" style="height:150px;width:auto"><br><br>
 
 ## Referensi
 https://www.wartaekonomi.co.id/read366664/apa-itu-bahasa-pemrograman-python<br>
