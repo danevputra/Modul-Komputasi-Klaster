@@ -86,6 +86,21 @@ Penjelasan :
 1. ```import mysql.connector as connection``` : digunakan untuk mengimport library mysql-connector-python yang berfungsi untuk menghubungkan program dengan database, sedangkan ```as connection``` digunakan untuk menyingkat nama library sehingga dalam program library ini cukup dipanggil dengan nama connection tidak perlu dengan mysql.connector
 2. ```import time``` : digunakan untuk mengimport library time yang berfungsi untuk menghitung lama waktu yang diperlukan oleh program untuk tereksekusi
 3. ```import pandas as pd``` : digunakan untuk mengimport library pandas yang berfungsi untuk manipulasi dan analisis data yang pada kasus ini dipergunakan untuk melakukan penilaian dan menulis hasil penilaian ke csv, sedangkan ```as pd``` berarti pada program untuk memanggil library ini cukup dengan variabel pd
+4. ```import psutil``` : digunakan untuk mengimport library psutil yang nantinya berfungsi untuk melakukan deteksi jumlah core pada processor
+5. ```from bounded_pool_executor import BoundedProcessPoolExecutor``` : digunakan untuk mengimport modul BoundedProcessPoolExecutor dari library bounded_pool_executor yang berfungsi untuk menjalankan proses secara parallel pada semua core yang ada
+6. ```import warnings``` : digunakan untuk menampilkan error yang terjadi, dikarenakan terkadang apabila ada error python akan langsung melakukan terminate tanpa menampilkan pesan error
+7. ```warnings.filterwarnings("ignore")``` : digunakan untuk melakukan ignoring pada semua warning yang muncul
+8. ```def loadDB(id_kota):``` : fungsi loadDB, dimana fungsi ini akan menerima parameter id_kota
+9. ```t = time.time()``` : berfungsi sebagai pencatat waktu awal, ketika program memasuki fungsi loadDB()
+10. ```try:``` dan ```except Exception as e:``` : pertama program akan mencoba untuk menjalankan code yang berada pada block try, namun jika ada error maka akan dilempar ke dalam code yang berada pada block except
+11. ```mydb = connection.connect(host="Localhost", database='(db name)', user="(username)", password="(password)", use_pure=True)``` : berfungsi untuk menghubungkan program ke mysql server dengan database, username, dan password yang tersedia
+12. ```query = 'select id_siswa, nama, nrp, value, jawaban_benar, id_mapel from soal_jawaban where id_kota=%d;' % id_kota``` : merupakan query yang akan kita jalankan pada database, untuk ```%d``` dan ```%id_kota``` berarti query ini akan mengikuti berapa id_kota yang dimasukkan sebagai parameter pada fungsi loadDB()
+13. ```ujian_siswa = pd.read_sql(query, mydb)``` : berfungsi untuk menjalankan query pada database, menggunakan library pandas, dan hasilnya disimpan ke dalam variabel ujian_siswa
+14. ```mydb.close()``` : menutup koneksi ke database
+15. ```except Exception as e:``` : apabila terdapat error pada block try maka program akan masuk ke sini
+16. ```print(str(e))``` : menampilkan pesan error
+17. ```elapsed = time.time() - t``` : menghitung waktu yang dibutuhkan untuk load data dari database dengan cara mengurangi waktu saat ini dengan waktu yang ada di variabel t
+18. ```print("Time Load DB  = {:.3f}".format(elapsed))``` : Menampilkan waktu load database
 
 ## Mengolah Nilai dengan Raspberry
 
