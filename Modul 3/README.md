@@ -61,8 +61,7 @@ def loadDB(id_kota):
     ujian_siswa.loc[ujian_siswa['value'] ==
                     ujian_siswa['jawaban_benar'], ['score']] = 1
     ujian_siswa = ujian_siswa.fillna(0)
-    result = ujian_siswa.groupby(['id_siswa', 'nama', 'nrp', 'id_mapel'])[
-        'score'].agg('sum')
+    result = ujian_siswa.groupby(['id_siswa', 'nama', 'nrp', 'id_mapel'])['score'].agg('sum')
     # result = ujian_siswa.groupby(['id_siswa'])['score'].sum()
     result.to_csv("id_kota_%d.csv" % id_kota)
 
@@ -100,7 +99,9 @@ Penjelasan :
 15. ```except Exception as e:``` : apabila terdapat error pada block try maka program akan masuk ke sini
 16. ```print(str(e))``` : menampilkan pesan error
 17. ```elapsed = time.time() - t``` : menghitung waktu yang dibutuhkan untuk load data dari database dengan cara mengurangi waktu saat ini dengan waktu yang ada di variabel t
-18. ```print("Time Load DB  = {:.3f}".format(elapsed))``` : Menampilkan waktu load database
+18. ```print("Time Load DB  = {:.3f}".format(elapsed))``` : Menampilkan waktu yang diperlukan untuk melakukan load database
+19. ```ujian_siswa.loc[ujian_siswa['value'] == ujian_siswa['jawaban_benar'], ['score']] = 1``` : apabila ```ujian_siswa['value']``` yang merupakan jawaban dari siswa sama dengan ```ujian_siswa['jawaban_benar']``` yang merupakan kunci jawaban, maka nilai ```score``` dijadikan 1
+20. ```ujian_siswa = ujian_siswa.fillna(0)``` : fungsi ini bertujuan untuk mengubah field yang kosong menjadi angka 0
 
 ## Mengolah Nilai dengan Raspberry
 
