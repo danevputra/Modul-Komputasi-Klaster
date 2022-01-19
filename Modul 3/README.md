@@ -18,6 +18,15 @@ Python, salah satu bahasa pemrograman paling populer di dunia, telah menciptakan
 9. Kemudian buka command prompt dan jalankan perintah ```py hello.py```<br><br><img src= "img/2.JPG"><br><br>
 10. Sebenarnya command ```py namafile.py``` mirip jika kita akan menjalankan program python pada linux, hanya saja di linux kita gunakan command ```python3 namafile.py```
 
+### Install Library tambahan
+
+Install library yang diperlukan dengan menjalankan command di bawah melalui command prompt
+
+1. pip3 install bounded-pool-executor
+2. pip3 install mysql-connector-python
+3. pip3 install pandas
+4. pip3 install psutil
+
 ### Program Python
 Berikut adalah program python untuk mengolah nilai
 ```python
@@ -73,6 +82,10 @@ if __name__ == '__main__':
     elapsed = time.time() - tAll
     print("Time selesai  = {:.3f}".format(elapsed))
 ```
+Penjelasan :
+1. ```import mysql.connector as connection``` : digunakan untuk mengimport library mysql-connector-python yang berfungsi untuk menghubungkan program dengan database, sedangkan ```as connection``` digunakan untuk menyingkat nama library sehingga dalam program library ini cukup dipanggil dengan nama connection tidak perlu dengan mysql.connector
+2. ```import time``` : digunakan untuk mengimport library time yang berfungsi untuk menghitung lama waktu yang diperlukan oleh program untuk tereksekusi
+3. ```import pandas as pd``` : digunakan untuk mengimport library pandas yang berfungsi untuk manipulasi dan analisis data yang pada kasus ini dipergunakan untuk melakukan penilaian dan menulis hasil penilaian ke csv, sedangkan ```as pd``` berarti pada program untuk memanggil library ini cukup dengan variabel pd
 
 ## Mengolah Nilai dengan Raspberry
 
@@ -129,12 +142,12 @@ Untuk menjalankan program script yang diberikan oleh Bapak Dwi, diperlukan pytho
 
 ### Install Library tambahan
 
-Adapula beberapa library yang diperlukan untuk run program python yang diberikan, beberapanya adalah BoundedProcessor, pandas dll.
+Install library yang diperlukan dengan command :
 
-1. pip install pandas
-2. pip install bounded-pool-executor
-3. pip install mysql
-
+1. pip3 install bounded-pool-executor
+2. pip3 install mysql-connector-python
+3. pip3 install pandas
+4. pip3 install psutil
 
 ### Download Database
 Untuk mendapatkan DB yang telah disiapkan maka perlu dilakukan download dari google drive dengan command 
