@@ -2,7 +2,7 @@
 
 ## Konsep
 ### Pengertian Python
-<br><br><img src= "https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png" style="height:90px;width:auto"><br><br>
+<br><img src= "https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png" style="height:90px;width:auto"><br><br>
 Python, salah satu bahasa pemrograman paling populer di dunia, telah menciptakan segalanya mulai dari algoritma rekomendasi Netflix hingga software yang mampu mengontrol mobil yang bisa mengemudi sendiri. Python adalah bahasa pemrograman yang dirancang untuk digunakan dalam berbagai aplikasi, termasuk ilmu data, pengembangan software dan website, otomatisasi, serta umumnya mampu menyelesaikan pekerjaan lainnya.
 
 ## Instalasi VnC
