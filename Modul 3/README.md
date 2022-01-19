@@ -136,7 +136,7 @@ if __name__ == '__main__':
 ## Install Python pada Windows
 1. Download software python disini ([Download](https://www.python.org/downloads/))  sesuaikan dengan versi windows yang anda gunakan.
 2. Double click pada software python yang telah didownload.<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2020/12/cara-install-python-39-img2.png" style="height:200px;width:auto"><br><br>
-3. Centang Install launcher for all user (recommended) dan Add Python 3.9 to PATH untuk penambahan path command Python, Lalu Jalankan proses Klik Install Now dan klik Yes bila ada notifikasi<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2021/01/cara-install-python-39-img3.png" style="height:200px;width:auto"><br><br>
+3. Centang Install launcher for all user (recommended) dan Add Python 3.9 to PATH untuk penambahan path command Python, Lalu Jalankan proses Klik Install Now dan klik Yes bila ada notifikasi<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2021/01/cara-install-python-39-img3.png" style="height:300px;width:auto"><br><br>
 4. Proses Setup sedang berjalan, harap tunggu dan jangan sampai tekan close<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2020/12/cara-install-python-39-img4.png" style="height:300px;width:auto"><br><br>
 5. Proses Setup telah selesai, Click Close, Kita lanjut untuk test aplikasi dan test coding.<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2020/12/cara-install-python-39-img5.png" style="height:300px;width:auto"><br><br>
 6. Buka aplikasi python, Klik Windows => Semua aplikasi => Python 3.9 => Python 3.9 (64-bit).<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2020/12/cara-install-python-39-img6.png" style="height:200px;width:auto"><br><br>
