@@ -136,8 +136,17 @@ if __name__ == '__main__':
 ## Install Python pada Windows
 1. Download software python disini ([Download](https://www.python.org/downloads/))  sesuaikan dengan versi windows yang anda gunakan.
 2. Double click pada software python yang telah didownload.<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2020/12/cara-install-python-39-img2.png" style="height:200px;width:auto"><br><br>
+3. Centang Install launcher for all user (recommended) dan Add Python 3.9 to PATH untuk penambahan path command Python, Lalu Jalankan proses Klik Install Now dan klik Yes bila ada notifikasi<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2021/01/cara-install-python-39-img3.png" style="height:200px;width:auto"><br><br>
+4. Proses Setup sedang berjalan, harap tunggu dan jangan sampai tekan close<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2021/01/cara-install-python-39-img4.png" style="height:200px;width:auto"><br><br>
+5. Proses Setup telah selesai, Click Close, Kita lanjut untuk test aplikasi dan test coding.<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2021/01/cara-install-python-39-img5.png" style="height:200px;width:auto"><br><br>
+6. Buka aplikasi python, Klik Windows => Semua aplikasi => Python 3.9 => Python 3.9 (64-bit).<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2021/01/cara-install-python-39-img6.png" style="height:200px;width:auto"><br><br>
+7. Kita akan menguji dengan perintah print (“Hello world”).<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2021/01/cara-install-python-39-img7.png" style="height:200px;width:auto"><br><br>
+8. Cara lain untuk menjalankan program python di windows adalah dengan mengetikkan command ```py namafile.py``` di command prompt, namun sebelum itu kita harus menyiapkan sebuah file, buatlah file hello.py sebagai berikut.
+9. Kemudian buka command prompt dan jalankan perintah ```py hello.py```
+10. Sebenarnya command ```py namafile.py``` mirip jika kita akan menjalankan program python pada linux, hanya saja di linux kita gunakan command ```python3 namafile.py```
 
 ## Referensi
 https://www.wartaekonomi.co.id/read366664/apa-itu-bahasa-pemrograman-python<br>
 https://pimylifeup.com/raspberry-pi-mysql/<br>
 https://realpython.com/installing-python/<br>
+https://www.itnotbad.com/cara-install-python-3-9-di-windows-10-untuk-belajar-programing/<br>
