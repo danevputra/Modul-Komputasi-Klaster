@@ -135,7 +135,7 @@ if __name__ == '__main__':
 
 ## Install Python pada Windows
 1. Download software python disini ([Download](https://www.python.org/downloads/))  sesuaikan dengan versi windows yang anda gunakan.
-2. Double click pada software python yang telah didownload.<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2020/12/cara-install-python-39-img2.png" style="height:150px;width:auto"><br><br>
+2. Double click pada software python yang telah didownload.<br><br><img src= "https://www.itnotbad.com/wp-content/uploads/2020/12/cara-install-python-39-img2.png" style="height:200px;width:auto"><br><br>
 
 ## Referensi
 https://www.wartaekonomi.co.id/read366664/apa-itu-bahasa-pemrograman-python<br>
