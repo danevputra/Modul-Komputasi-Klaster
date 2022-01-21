@@ -25,7 +25,7 @@ Install library yang diperlukan dengan menjalankan command di bawah melalui comm
 1. ```pip3 install bounded-pool-executor``` : bounded-pool-executor merupakan sebuah library pada python yang memungkinkan kita untuk menjalankan proses secara parallel dengan memanfaatkan sumber daya yang ada pada komputer semaksimal mungkin.<br><br><img src= "img/3.JPG"><br><br>
 2. ```pip3 install mysql-connector-python``` : mysql-connector-python merupakan sebuah library pada python yang berfungsi untuk menghubungkan program dengan database (berkomunikasi).<br><br><img src= "img/4.JPG"><br><br>
 3. ```pip3 install pandas``` : pandas merupakan sebuah library pada python yang berfungsi untuk memanipulasi dan menganalisis data.<br><br><img src= "img/5.JPG"><br><br>
-4. ```pip3 install psutil``` : psutil merupakan sebuah library pada python yang berfungsi untuk mendeteksi jumlah core pada processor.<br><br><img src= "img/6.JPG"><br>
+4. ```pip3 install psutil``` : psutil merupakan sebuah library pada python yang berfungsi untuk mendeteksi jumlah core pada processor.<br><br><img src= "img/6.JPG">
 
 ### Program Python
 Berikut adalah program python untuk mengolah nilai
