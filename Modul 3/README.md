@@ -125,7 +125,7 @@ Apabila melakukan koneksi melalui SSH hanya diberikan tampilan terminal, apabila
 5. Lakukan koneksi ke salah satu Node
 
 ### Koneksi VPN
-Dikarenakan Raspberry yang berada di lab KCKS yang menggunakan jaringan dari ITS, maka untuk melakukan koneksi SSH diperlukan VPN dan juga one-time-password yang bisa didapatkan dari website my.its.ac.id (jika langsung melakukan praktikum di laboratorium, maka tidak perlu melakukan hal berikut, cukup sambungkan internet anda dengan internet laboratorium)
+Dikarenakan Raspberry yang berada di lab KCKS yang menggunakan jaringan dari ITS, maka untuk melakukan koneksi SSH diperlukan VPN dan juga one-time-password yang bisa didapatkan dari website my.its.ac.id **(jika langsung melakukan praktikum di laboratorium, maka tidak perlu melakukan hal berikut, cukup sambungkan internet anda dengan internet laboratorium)**
 
 1. Masuk dan Login ke my.its.ac.id
 2. Masuk ke bagian One-time-password
