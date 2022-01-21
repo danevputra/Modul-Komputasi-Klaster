@@ -199,3 +199,4 @@ https://www.wartaekonomi.co.id/read366664/apa-itu-bahasa-pemrograman-python<br>
 https://pimylifeup.com/raspberry-pi-mysql/<br>
 https://realpython.com/installing-python/<br>
 https://www.itnotbad.com/cara-install-python-3-9-di-windows-10-untuk-belajar-programing/<br>
+https://www.dicloud.id/tutorial/articles/panduan-cara-memakai-vnc-viewer-di-windows-android<br>
