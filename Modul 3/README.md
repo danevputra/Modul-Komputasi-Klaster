@@ -120,12 +120,12 @@ Apabila melakukan koneksi melalui SSH hanya diberikan tampilan terminal, apabila
 
 1. Download VnC Viewer di sini ([Download](https://www.realvnc.com/en/connect/download/viewer/))
 2. Buka file yang telah di download<br><br><img src= "https://www.dicloud.id/tutorial/wp-content/uploads/2019/05/Screenshot_352.png"><br><br>
-3. Klik OK, kemudian next<br><br><img src= "https://www.dicloud.id/tutorial/wp-content/uploads/2019/05/Screenshot_353.png"><br><br>
-4. Kemudian kita akan dibawa ke halaman End-User License Agreement, centang I Accept untuk melanjutkan instalasi, seperti gambar dibawah ini :<br><br><img src= "https://www.dicloud.id/tutorial/wp-content/uploads/2019/05/Screenshot_354.png"><br><br>
-5. Klik Next, dan kita akan menuju tahap terakhir instalasi dimana kita diminta apakah anda ingin menambahkan shortcut pada dekstop atau tidak, jika tidak anda bisa klik next, seperti gambar dibawah ini :<br><br><img src= "https://www.dicloud.id/tutorial/wp-content/uploads/2019/05/Screenshot_355.png"><br><br>
-6. Instalasi selesai, kemudian buka program VNC Viewer<br><br><img src= "img/7.JPG"><br><br>
-7. Login menggunakan username ```klasterdti@gmail.com``` dengan Password ```klasterdti1959```<br><br><img src= "img/8.JPG"><br><br>
-9. Lakukan koneksi ke salah satu Node<br><br><img src= "img/9.JPG"><br><br>
+3. Klik OK, kemudian next<br><br><img src= "https://www.dicloud.id/tutorial/wp-content/uploads/2019/05/Screenshot_353.png" style="height:300px;width:auto"><br><br>
+4. Kemudian kita akan dibawa ke halaman End-User License Agreement, centang I Accept untuk melanjutkan instalasi, seperti gambar dibawah ini :<br><br><img src= "https://www.dicloud.id/tutorial/wp-content/uploads/2019/05/Screenshot_354.png" style="height:300px;width:auto"><br><br>
+5. Klik Next, dan kita akan menuju tahap terakhir instalasi dimana kita diminta apakah anda ingin menambahkan shortcut pada dekstop atau tidak, jika tidak anda bisa klik next, seperti gambar dibawah ini :<br><br><img src= "https://www.dicloud.id/tutorial/wp-content/uploads/2019/05/Screenshot_355.png" style="height:300px;width:auto"><br><br>
+6. Instalasi selesai, kemudian buka program VNC Viewer<br><br><img src= "img/7.JPG" style="height:300px;width:auto"><br><br>
+7. Login menggunakan username ```klasterdti@gmail.com``` dengan Password ```klasterdti1959```<br><br><img src= "img/8.JPG" style="height:300px;width:auto"><br><br>
+9. Lakukan koneksi ke salah satu Node<br><br><img src= "img/9.JPG" style="height:300px;width:auto"><br><br>
 10. Atau jika node tidak muncul, kalian bisa ketikkan alamat IP pada bagian atas VNC Viewer<br><br><img src= "img/10.JPG"><br><br> 
 
 ### Koneksi VPN
