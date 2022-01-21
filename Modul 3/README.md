@@ -22,10 +22,10 @@ Python, salah satu bahasa pemrograman paling populer di dunia, telah menciptakan
 
 Install library yang diperlukan dengan menjalankan command di bawah melalui command prompt (pip3 merupakan sebuah modul dari python 3 yang berfungsi untuk menginstall library tambahan)
 
-1. pip3 install bounded-pool-executor : bounded-pool-executor merupakan sebuah library pada python yang memungkinkan kita untuk menjalankan proses secara parallel dengan memanfaatkan sumber daya yang ada pada komputer semaksimal mungkin.
-2. pip3 install mysql-connector-python : mysql-connector-python merupakan sebuah library pada python yang berfungsi untuk menghubungkan program dengan database (berkomunikasi).
-3. pip3 install pandas : pandas merupakan sebuah library pada python yang berfungsi untuk memanipulasi dan menganalisis data
-4. pip3 install psutil : psutil merupakan sebuah library pada python yang berfungsi untuk mendeteksi jumlah core pada processor
+1. ```pip3 install bounded-pool-executor``` : bounded-pool-executor merupakan sebuah library pada python yang memungkinkan kita untuk menjalankan proses secara parallel dengan memanfaatkan sumber daya yang ada pada komputer semaksimal mungkin.
+2. ```pip3 install mysql-connector-python``` : mysql-connector-python merupakan sebuah library pada python yang berfungsi untuk menghubungkan program dengan database (berkomunikasi).
+3. ```pip3 install pandas``` : pandas merupakan sebuah library pada python yang berfungsi untuk memanipulasi dan menganalisis data
+4. ```pip3 install psutil``` : psutil merupakan sebuah library pada python yang berfungsi untuk mendeteksi jumlah core pada processor
 
 ### Program Python
 Berikut adalah program python untuk mengolah nilai
