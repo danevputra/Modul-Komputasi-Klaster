@@ -120,10 +120,13 @@ Apabila melakukan koneksi melalui SSH hanya diberikan tampilan terminal, apabila
 
 1. Download VnC Viewer di sini ([Download](https://www.realvnc.com/en/connect/download/viewer/))
 2. Buka file yang telah di download<br><br><img src= "https://www.dicloud.id/tutorial/wp-content/uploads/2019/05/Screenshot_352.png"><br><br>
-3. 
-4. Login menggunakan klasterdti@gmail.com
-5. Password menggunakan klasterdti1959
-6. Lakukan koneksi ke salah satu Node
+3. Klik OK, kemudian next<br><br><img src= "https://www.dicloud.id/tutorial/wp-content/uploads/2019/05/Screenshot_353.png"><br><br>
+4. Kemudian kita akan dibawa ke halaman End-User License Agreement, centang I Accept untuk melanjutkan instalasi, seperti gambar dibawah ini :<br><br><img src= "https://www.dicloud.id/tutorial/wp-content/uploads/2019/05/Screenshot_354.png"><br><br>
+5. Klik Next, dan kita akan menuju tahap terakhir instalasi dimana kita diminta apakah anda ingin menambahkan shortcut pada dekstop atau tidak, jika tidak anda bisa klik next, seperti gambar dibawah ini :<br><br><img src= "https://www.dicloud.id/tutorial/wp-content/uploads/2019/05/Screenshot_355.png"><br><br>
+6. Instalasi selesai, kemudian buka program VNC Viewer
+7. Login menggunakan klasterdti@gmail.com
+8. Password menggunakan klasterdti1959
+9. Lakukan koneksi ke salah satu Node
 
 ### Koneksi VPN
 Dikarenakan Raspberry yang berada di lab KCKS yang menggunakan jaringan dari ITS, maka untuk melakukan koneksi SSH diperlukan VPN dan juga one-time-password yang bisa didapatkan dari website my.its.ac.id **(jika langsung melakukan praktikum di laboratorium, maka tidak perlu melakukan hal berikut, cukup sambungkan internet anda dengan internet laboratorium)**
