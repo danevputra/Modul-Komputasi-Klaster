@@ -118,11 +118,12 @@ Penjelasan :
 ### Instalasi VnC
 Apabila melakukan koneksi melalui SSH hanya diberikan tampilan terminal, apabila menggunakan VnC bisa mendapatkan tampilan GUI. yang perlu dilakukan adalah
 
-1. Download VnC Viewer
-2. Lakukan Installasi
-3. Login menggunakan klasterdti@gmail.com
-4. Password menggunakan klasterdti1959
-5. Lakukan koneksi ke salah satu Node
+1. Download VnC Viewer di sini ([Download](https://www.realvnc.com/en/connect/download/viewer/))
+2. Buka file yang telah di download<br><br><img src= "https://www.dicloud.id/tutorial/wp-content/uploads/2019/05/Screenshot_352.png"><br><br>
+3. 
+4. Login menggunakan klasterdti@gmail.com
+5. Password menggunakan klasterdti1959
+6. Lakukan koneksi ke salah satu Node
 
 ### Koneksi VPN
 Dikarenakan Raspberry yang berada di lab KCKS yang menggunakan jaringan dari ITS, maka untuk melakukan koneksi SSH diperlukan VPN dan juga one-time-password yang bisa didapatkan dari website my.its.ac.id **(jika langsung melakukan praktikum di laboratorium, maka tidak perlu melakukan hal berikut, cukup sambungkan internet anda dengan internet laboratorium)**
