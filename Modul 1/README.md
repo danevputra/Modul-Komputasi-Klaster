@@ -137,9 +137,9 @@ Selanjutnya dengan kedua tabel tersebut kita akan mencoba mencari hubungan antar
 2. Maka kita akan mendapatkan hasil query sebagai berikut<br><br><img src= "img/12.JPG"><br><br>
 
 ## 4. Generate Big Data
-Selanjutnya kita akan mencoba untuk menggunakan data yang lebih besar, tentu saja kita tidak akan memasukkan data satu per satu, melainkan kita akan membuatnya menggunakan program, dan berikut programnya :
-**config.py***
-```
+Selanjutnya kita akan mencoba untuk menggunakan data yang lebih besar, tentu saja kita tidak akan memasukkan data satu per satu, melainkan kita akan membuatnya menggunakan program, dan berikut programnya :<br><br>
+**config.py**
+```python
 panjang_nrp = 14
 total_siswa = 20
 total_soal = 30
@@ -198,9 +198,9 @@ mata_pelajaran = [
 ]
 ```
 File ini sebenarnya hanya berisi deklarasi dari variabel yang akan dipakai, baik itu panjang nrp, total siswa, total soal, huruf yang menjadi pilihan jawaban, nama-nama kota, dan nama-nama mata pelajaran.
-<br>
+<br><br>
 **generate-jawaban.py**
-```
+```python
 from faker import Faker
 import csv
 import config
