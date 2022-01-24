@@ -135,7 +135,120 @@ Pada halaman inilah, Anda dapat melakukan pengelolaan database untuk website And
 Selanjutnya dengan kedua tabel tersebut kita akan mencoba mencari hubungan antara nama user, alamat user, dan jumlah barang yang dibeli.
 1. Kita dapat menggunakan query sebagai berikut <br><br><img src= "img/11.JPG"><br><br>Penjelasan :<br>a. ```SELECT``` : merupakan perintah dalam mysql untuk menampilkan data<br>b. ```users.name``` : digunakan untuk mengambil nilai pada kolom nama dari tabel users<br>c. ```pembelian.jml_barang``` : digunakan untuk mengambil data dari kolom jml_barang pada tabel pembelian<br>d. ```FROM 'users'``` : mengambil data dari tabel users<br>e. ```INNER JOIN pembelian``` : Menggabungkan dengan tabel pembelian<br>f. ```ON users.id=pembelian.id_user``` : tabel users dan pembelian akan digabungkan dengan memperhatikan nilai yang sama dari kolom id pada tabel users dan kolom id_user dari tabel pembelian
 2. Maka kita akan mendapatkan hasil query sebagai berikut<br><br><img src= "img/12.JPG"><br><br>
+
 ## 4. Generate Big Data
+Selanjutnya kita akan mencoba untuk menggunakan data yang lebih besar, tentu saja kita tidak akan memasukkan data satu per satu, melainkan kita akan membuatnya menggunakan program, dan berikut programnya :
+**config.py***
+```
+panjang_nrp = 14
+total_siswa = 20
+total_soal = 30
+pilihan_jawaban = ["A", "B", "C", "D"]
+
+# Jumlah 38 kota
+kota = [
+    "Kabupaten Bangkalan",
+    "Kabupaten Banyuwangi",
+    "Kabupaten Blitar",
+    "Kabupaten Bojonegoro",
+    "Kabupaten Bondowoso",
+    "Kabupaten Gresik",
+    "Kabupaten Jember",
+    "Kabupaten Jombang",
+    "Kabupaten Kediri",
+    "Kabupaten Lamongan",
+    "Kabupaten Lumajang",
+    "Kabupaten Madiun",
+    "Kabupaten Magetan",
+    "Kabupaten Malang",
+    "Kabupaten Mojokerto",
+    "Kabupaten Nganjuk",
+    "Kabupaten Ngawi",
+    "Kabupaten Pacitan",
+    "Kabupaten Pamekasan",
+    "Kabupaten Pasuruan",
+    "Kabupaten Ponorogo",
+    "Kabupaten Probolinggo",
+    "Kabupaten Sampang",
+    "Kabupaten Sidoarjo",
+    "Kabupaten Situbondo",
+    "Kabupaten Sumenep",
+    "Kabupaten Trenggalek",
+    "Kabupaten Tuban",
+    "Kabupaten Tulungagung",
+    "Kota Batu",
+    "Kota Blitar",
+    "Kota Kediri",
+    "Kota Madiun",
+    "Kota Malang",
+    "Kota Mojokerto",
+    "Kota Pasuruan",
+    "Kota Probolinggo",
+    "Kota Surabaya",
+]
+
+mata_pelajaran = [
+    "Fisika",
+    "Kimia",
+    "Matematika",
+    "Biologi",
+    "Agama",
+    "Bahasa Indonesia",
+    "Bahasa Inggris",
+]
+```
+File ini sebenarnya hanya berisi deklarasi dari variabel yang akan dipakai, baik itu panjang nrp, total siswa, total soal, huruf yang menjadi pilihan jawaban, nama-nama kota, dan nama-nama mata pelajaran.
+<br>
+**generate-jawaban.py**
+```
+from faker import Faker
+import csv
+import config
+import json
+
+fake = Faker()
+
+total_siswa = config.total_siswa
+total_soal = config.total_soal
+id = 0
+
+f = open("csv/jawaban.csv", "w")
+writer = csv.writer(f)
+header = ["id", "id_siswa", "id_soal", "jawaban"]
+writer.writerow(header)
+
+for idx_siswa in range(total_siswa):
+    id += 1
+    id_siswa = idx_siswa + 1
+    for idx_soal in range(total_soal):
+        id_soal = idx_soal + 1
+        jawaban = fake.random_element(elements=config.pilihan_jawaban)
+        writer.writerow([id, id_siswa, id_soal, jawaban])
+
+f.close()
+```
+Penjelasan :
+1. ```from faker import Faker``` : mengimport modul Faker dari library faker yang berfungsi untuk membuat dataset, seperti melakukan random nama, umur, lokasi, dan lain sebagainya
+2. ```import csv``` : melakukan import library csv yang berfungsi untuk mencetak data yang di generate ke dalam CSV
+3. ```import config``` : mengimport file config.py
+4. ```import json``` : mengimport library json yang memungkinkan kita untuk mengolah data dengan format json
+5. ```fake = Faker()``` : mendeklarasikan variabel fake yang berisi fungsi Faker()
+6. ```total_siswa = config.total_siswa``` : mendeklarasikan variabel total_siswa yang nilainya sama dengan total_siswa yang sudah dideklarasikan pada file config.py
+7. ```total_soal = config.total_soal``` : mendeklarasikan variabel total_soal yang nilainya sama dengan total_soal yang sudah dideklarasikan pada file config.py
+8. ```id = 0``` : mendeklarasikan variabel id yang nantinya digunakan untuk mengisi kolom id sebagai primary key
+9. ```f = open("csv/jawaban.csv", "w")``` : membuka/membuat(jika belum ada) file jawaban.csv yang berada di dalam folder csv dengan metode write("w")
+10. ```writer = csv.writer(f)``` : mendeklarasikan variabel writer dengan isi fungsi writer dari library csv di mana nantinya fungsi ini akan menuliskan outputnya pada file csv/jawaban.csv
+11. ```header = ["id", "id_siswa", "id_soal", "jawaban"]``` : variabel header yang memuat nama-nama kolom
+12. ```writer.writerow(header)``` : menuliskan header pada file csv
+13. ```for idx_siswa in range(total_siswa):``` : fungsi loop untuk menjalankan program sebanyak total_siswa yang sudah dideklarasikan
+14. ```id += 1``` : melakukan increment variabel id
+15. ```id_siswa = idx_siswa + 1``` : id siswa yang akan dimasukkan ke dalam database sama degan nilai dari idx_siswa saat ini ditambah 1
+16. ```for idx_soal in range(total_soal):``` : melakukan loop sebanyak total_soal yang telah ditentukan sebelumnya (pada file config.py)
+17. ```id_soal = idx_soal + 1``` : id_soal yang akan dimasukkan ke dalam database adalah nilai idx_soal sekarang ditambah 1
+18. ```jawaban = fake.random_element(elements=config.pilihan_jawaban)``` : melakukan random data jawaban dengan elemen berupa pilihan_jawaban yang telah di deklarasikan pada file config.py
+19. ```writer.writerow([id, id_siswa, id_soal, jawaban])``` : mencetak id, id_siswa, id_soal, dan jawaban ke dalam file csv
+20. ```f.close()``` : menutup interaksi soal dengan file csv
+
 ## 5. Query Nilai Siswa dari Big Data
 Dari data tersebut kita akan mencoba untuk mencari relasi antara id siswa, nama siswa, nrp, id mapel, dan nilai
 1. Agar kita tidak perlu melakukan join setiap saat maka kita dapat membuat view, dengan query sebagai berikut <br> ```CREATE VIEW soal_jawaban AS SELECT Jawaban.id_siswa, Siswa.nama, Siswa.nrp, Siswa.id_kota, Jawaban.value, Soal.jawaban_benar, Soal.id_mapel FROM Jawaban INNER JOIN Soal on Jawaban.id_soal = Soal.id INNER JOIN Siswa ON Jawaban.id_siswa = Siswa.id;```
