@@ -1,4 +1,5 @@
 # Database & Query
+<br><br><span style="text-decoration:underline;text-weight:bold">this</span>
 ## 1. Konsep
 ### A. Pengertian Database
 Database atau basis data adalah kumpulan data yang dikelola sedemikian rupa berdasarkan ketentuan tertentu yang saling berhubungan sehingga mudah dalam pengelolaannya. Melalui pengelolaan tersebut pengguna dapat memperoleh kemudahan dalam mencari informasi, menyimpan informasi dan membuang informasi.
