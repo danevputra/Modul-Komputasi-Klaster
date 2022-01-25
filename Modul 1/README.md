@@ -486,6 +486,11 @@ files = [
 for file in files:
     importlib.import_module(file)
 ```
+Tujuan dari program ini adalah menjalankan semua file yang lain (kecuali generate-schema.py), dan berikut penjelasannya :
+1. ```import importlib``` : mengimport library importlib untuk menjalankan tiap file yang akan dipanggil
+2. ```files = [``` : membuat list yang berisi nama file yang akan dieksekusi
+3. ```for file in files:``` : melakukan looping sebanyak isi list files
+4. ```importlib.import_module(file)``` : menjalankan file yang dipanggil
 
 ## 5. Query Nilai Siswa dari Big Data
 Dari data tersebut kita akan mencoba untuk mencari relasi antara id siswa, nama siswa, nrp, id mapel, dan nilai
