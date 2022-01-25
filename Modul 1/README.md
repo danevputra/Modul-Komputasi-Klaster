@@ -248,6 +248,7 @@ Penjelasan :
 18. ```jawaban = fake.random_element(elements=config.pilihan_jawaban)``` : melakukan random data jawaban dengan elemen berupa pilihan_jawaban yang telah di deklarasikan pada file config.py
 19. ```writer.writerow([id, id_siswa, id_soal, jawaban])``` : mencetak id, id_siswa, id_soal, dan jawaban ke dalam file csv
 20. ```f.close()``` : menutup interaksi soal dengan file csv
+
 <br><br>
 **generate-kota.py**
 ```python
@@ -281,6 +282,7 @@ f.close()
 Penjelasan (untuk line yang sama dengan file sebelumnya tidak dijelaskan ulang) :
 1. ```header = ['id', 'nama']``` : header dari csv yang akan dihasilkan dari program ini adalah id dan nama
 2. ```for _kota in config.kota:``` : melakukan looping sebanyak kota yang sudah di deklarasikan pada file config.py
+
 <br><br>
 **generate-mata-pelajaran.py**
 ```python
@@ -302,6 +304,7 @@ f.close()
 ```
 Penjelasan (untuk line yang sama dengan file sebelumnya tidak dijelaskan ulang) :
 1. ```for _mapel in config.mata_pelajaran:``` : melakukan looping sebanyak mata_pelajaran yang sudah dideklarasikan pada config.py
+
 <br><br>
 **generate-siswa.py**
 ```python
@@ -350,9 +353,10 @@ Penjelasan (untuk line yang sama dengan file sebelumnya tidak dijelaskan ulang) 
 3. ```nrp = prefix_kota + str(idx_siswa + 1).zfill(config.panjang_nrp - 3)``` : membuat nrp dengan cara menggabungkan prefiks kota dan idx_siswa saat ini yang sudah diberi padding sesuai panjang_nrp-3 yang telah dideklarasikan pada config.py (misal : prefix_kota adalah 001 sedangkan idx_siswa saat ini adalah 20 maka akan diberi padding sebanyak 9 sehingga menjadi 00000000020 dan jika digabungkan dengan prefix_kota akan menjadi 00100000000020)
 4. ```nama = fake.name()``` : mendapatkan nama dengan menggunakan fungsi name() pada modul Faker (random)
 5. ```row = [id, id_kota, nrp, nama]``` : kolom yang akan dipakai dalam tabel ini adalah id, id_kota, nrp, dan nama
+
 <br><br>
 **generate-siswa.py**
-```
+```python
 from faker import Faker
 import csv
 import config
