@@ -248,6 +248,148 @@ Penjelasan :
 18. ```jawaban = fake.random_element(elements=config.pilihan_jawaban)``` : melakukan random data jawaban dengan elemen berupa pilihan_jawaban yang telah di deklarasikan pada file config.py
 19. ```writer.writerow([id, id_siswa, id_soal, jawaban])``` : mencetak id, id_siswa, id_soal, dan jawaban ke dalam file csv
 20. ```f.close()``` : menutup interaksi soal dengan file csv
+<br><br>
+**generate-kota.py**
+```python
+import csv
+import config
+
+# buka file yang akan ditulis dengan mode write (akan melakukan overwrite)
+f = open('csv/kota.csv', 'w')
+
+# inisiasi `writer` dari csv untuk dapat menulis kedalam file csv
+writer = csv.writer(f)
+
+# header yang akan ditulis (berupa list)
+header = ['id', 'nama']
+
+# tulis header ke file csv
+writer.writerow(header)
+
+id = 0
+
+# looping untuk menulis data ke file csv
+for _kota in config.kota:
+    id = id + 1
+
+    # tulis baris ke file csv
+    writer.writerow([id,_kota])
+
+# tutup file agar tidak terjadi error
+f.close()
+```
+Penjelasan (untuk line yang sama dengan file sebelumnya tidak dijelaskan ulang) :
+1. ```header = ['id', 'nama']``` : header dari csv yang akan dihasilkan dari program ini adalah id dan nama
+2. ```for _kota in config.kota:``` : melakukan looping sebanyak kota yang sudah di deklarasikan pada file config.py
+<br><br>
+**generate-mata-pelajaran.py**
+```python
+import csv
+import config
+
+f = open('csv/mata_pelajaran.csv', 'w')
+writer = csv.writer(f)
+
+header = ['id', 'nama']
+writer.writerow(header)
+
+id = 1
+for _mapel in config.mata_pelajaran:
+    id = id + 1
+    writer.writerow([id,_mapel])
+
+f.close()
+```
+Penjelasan (untuk line yang sama dengan file sebelumnya tidak dijelaskan ulang) :
+1. ```for _mapel in config.mata_pelajaran:``` : melakukan looping sebanyak mata_pelajaran yang sudah dideklarasikan pada config.py
+<br><br>
+**generate-siswa.py**
+```python
+from faker import Faker
+import csv
+import config
+
+# inisiasi objek Faker
+fake = Faker()
+
+# Format nrp (14 digit): <3-digit-id-kota><x-digit-padding><urutan-siswa-di-kota>
+# contoh: 02100000000123
+# 021 - id kota
+# 000123 - urutan siswa di kota
+
+# Jumlah 38 kota
+# 001 - 038
+
+total_kota = len(config.kota)
+total_siswa = config.total_siswa
+id = 0
+
+f = open("csv/siswa.csv", "w")
+writer = csv.writer(f)
+header = ["id", "id_kota", "nrp", "nama"]
+
+writer.writerow(header)
+
+for idx_kota in range(total_kota):
+    id_kota = idx_kota + 1
+
+    # zfill = menambahkan 0 di depan sampai panjang n (padding)
+    prefix_kota = str(id_kota).zfill(3)
+    for idx_siswa in range(total_siswa):
+        id += 1
+        nrp = prefix_kota + str(idx_siswa + 1).zfill(config.panjang_nrp - 3)
+        nama = fake.name()
+        row = [id, id_kota, nrp, nama]
+        writer.writerow(row)
+
+f.close()
+```
+Penjelasan (untuk line yang sama dengan file sebelumnya tidak dijelaskan ulang) :
+1. ```total_kota = len(config.kota)``` : mendefinisikan variabel total_kota yang menampung nilai panjang kota yang didefinisikan pada file config.py
+2. ```prefix_kota = str(id_kota).zfill(3)``` : membuat prefix kota dengan cara mengambil id_kota saat ini dan menambahkan padding hingga nantinya total ada 3 digit (misal : id_kota sekarang adalah 1 maka dengan zfill(3) akan menjadi 001)
+3. ```nrp = prefix_kota + str(idx_siswa + 1).zfill(config.panjang_nrp - 3)``` : membuat nrp dengan cara menggabungkan prefiks kota dan idx_siswa saat ini yang sudah diberi padding sesuai panjang_nrp-3 yang telah dideklarasikan pada config.py (misal : prefix_kota adalah 001 sedangkan idx_siswa saat ini adalah 20 maka akan diberi padding sebanyak 9 sehingga menjadi 00000000020 dan jika digabungkan dengan prefix_kota akan menjadi 00100000000020)
+4. ```nama = fake.name()``` : mendapatkan nama dengan menggunakan fungsi name() pada modul Faker (random)
+5. ```row = [id, id_kota, nrp, nama]``` : kolom yang akan dipakai dalam tabel ini adalah id, id_kota, nrp, dan nama
+<br><br>
+**generate-siswa.py**
+```
+from faker import Faker
+import csv
+import config
+import json
+
+# inisiasi object Faker
+fake = Faker()
+
+# ambil total soal dari config
+total_soal = config.total_soal
+id = 0
+
+f = open("csv/soal.csv", "w")
+writer = csv.writer(f, doublequote=True, quoting=csv.QUOTE_ALL)
+header = ["id", "id_mapel", "body", "pilihan_jawaban", "jawaban_benar"]
+writer.writerow(header)
+
+total_mapel = len(config.mata_pelajaran)
+for idx_mapel in range(total_mapel):
+    id_mapel = idx_mapel + 1
+    for i in range(total_soal):
+        id += 1
+
+        # gunakan faker untuk membuat susunan string random maksimal 200 karakter
+        body = fake.paragraph(nb_sentences=2)
+
+        pilihan_jawaban = dict()
+        for pilihan in config.pilihan_jawaban:
+            pilihan_jawaban[pilihan] = fake.paragraph(nb_sentences=1)
+
+        # pilih satu jawaban random berdasarkan list dari config
+        jawaban_benar = fake.random_element(elements=config.pilihan_jawaban)
+
+        writer.writerow([id, id_mapel, body, pilihan_jawaban, jawaban_benar])
+
+f.close()
+```
 
 ## 5. Query Nilai Siswa dari Big Data
 Dari data tersebut kita akan mencoba untuk mencari relasi antara id siswa, nama siswa, nrp, id mapel, dan nilai
