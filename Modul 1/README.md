@@ -492,6 +492,15 @@ Tujuan dari program ini adalah menjalankan semua file yang lain (kecuali generat
 3. ```for file in files:``` : melakukan looping sebanyak isi list files
 4. ```importlib.import_module(file)``` : menjalankan file yang dipanggil
 
+<br><br>
+**Cara Menjalankan**
+1. Download file dari repository yang ada, bisa melalui command git clone atau langsung tekan tombol download di repository
+2. Pastikan XAMPP sudah menyala dan tekan tombol shell untuk masuk ke dalam shell
+3. Buat database dengan command ```mysql -e "drop database if exists CBT_JATIM; create database CBT_JATIM;"```
+4. Generate Schema dengan command ```python generate-schema.py``` di command prompt
+5. Generate data dengan command ```python generate-all.py```
+6. Terakhir masukkan command ```mysql < import-from-csv.sql``` di shell yang terbuka melalui XAMPP untuk mengimport csv ke mysql
+
 ## 5. Query Nilai Siswa dari Big Data
 Dari data tersebut kita akan mencoba untuk mencari relasi antara id siswa, nama siswa, nrp, id mapel, dan nilai
 1. Agar kita tidak perlu melakukan join setiap saat maka kita dapat membuat view, dengan query sebagai berikut <br> ```CREATE VIEW soal_jawaban AS SELECT Jawaban.id_siswa, Siswa.nama, Siswa.nrp, Siswa.id_kota, Jawaban.value, Soal.jawaban_benar, Soal.id_mapel FROM Jawaban INNER JOIN Soal on Jawaban.id_soal = Soal.id INNER JOIN Siswa ON Jawaban.id_siswa = Siswa.id;```
