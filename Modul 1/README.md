@@ -355,7 +355,7 @@ Penjelasan (untuk line yang sama dengan file sebelumnya tidak dijelaskan ulang) 
 5. ```row = [id, id_kota, nrp, nama]``` : kolom yang akan dipakai dalam tabel ini adalah id, id_kota, nrp, dan nama
 
 <br><br>
-**generate-siswa.py**
+**generate-soal.py**
 ```python
 from faker import Faker
 import csv
@@ -393,6 +393,98 @@ for idx_mapel in range(total_mapel):
         writer.writerow([id, id_mapel, body, pilihan_jawaban, jawaban_benar])
 
 f.close()
+```
+Penjelasan (untuk line yang sama dengan file sebelumnya tidak dijelaskan ulang) :
+1. ```writer = csv.writer(f, doublequote=True, quoting=csv.QUOTE_ALL)``` : sebenarnya ini sama dengan file-file sebelummnya, hanya saja karena kita akan membuat soal dengan tipe string yang kemungkinan akan mengandung tanda petik, maka kita harus melakukan escape terhadap tanda petik tesebut dengan cara doublequote=True, sedangkan quoting=csv.QUOTE_ALL digunakan untuk memberikan tanda petik pada setiap data, tidak peduli apakah itu angka, string, dan lain sebagainya.
+2. ```header = ["id", "id_mapel", "body", "pilihan_jawaban", "jawaban_benar"]``` : header yang akan dihasilkan oleh program ini adalah id, id_mapel, body, pilihan_jawaban, jawaban_benar
+3. ```body = fake.paragraph(nb_sentences=2)``` : menggunakan faker untuk melakukan generate isi soal dengan maksimal panjang string adalah 200 karakter
+4. ```pilihan_jawaban = dict()``` : membuat dictionary, dalam python dictionary adalah sebuah object yang berbentu seperti berikut ```dict(name = "John", age = 36, country = "Norway")```
+5. ```pilihan_jawaban[pilihan] = fake.paragraph(nb_sentences=1)``` : merandom isi dari pilihan jawaban dengan maksimal 100 karakter
+6. ```jawaban_benar = fake.random_element(elements=config.pilihan_jawaban)``` : merandom jawaban benar, berdasarkan pilihan_jawaban yang telah di deklarasi pada file config.py
+
+<br><br>
+**generate-schema.py**
+```python
+"""
+Opsi lain untuk bikin schema sql
+"""
+
+from sqlalchemy import *
+
+db_username = 'm42nk'
+db_host = 'localhost'
+db_name = 'CBT_JATIM'
+
+engine = create_engine(f'mysql://{db_username}@{db_host}/{db_name}')
+metadata_obj = MetaData(engine)
+
+metadata_obj.drop_all()
+
+Table('Kota', metadata_obj,
+    Column('id', Integer, primary_key=True),
+    Column('nama', String(255)),
+)
+
+Table('Mata_Pelajaran', metadata_obj,
+    Column('id', Integer, primary_key=True),
+    Column('nama', String(255)),
+)
+
+Table('Siswa', metadata_obj,
+    Column('id', Integer, primary_key=True),
+    Column('id_kota', Integer, ForeignKey("Kota.id"), nullable=false),
+    Column('nrp', String(255)),
+    Column('nama', String(255)),
+)
+
+Table('Soal', metadata_obj,
+    Column('id', Integer, primary_key=True),
+    Column('id_mapel', Integer, ForeignKey("Mata_Pelajaran.id"), nullable=false),
+    Column('body', String(255)),
+    Column('pilihan_jawaban', String(255)),
+    Column('jawaban_benar', String(1)),
+)
+
+Table('Jawaban', metadata_obj,
+    Column('id', Integer, primary_key=True),
+    Column('id_siswa', Integer, ForeignKey("Siswa.id"), nullable=false),
+    Column('id_soal', Integer, ForeignKey("Soal.id"), nullable=false),
+    Column('jawaban', String(1)),
+)
+
+metadata_obj.create_all()
+```
+Program ini bertujuan untuk membuat tabel pada database dengan penjelasan sebagai berikut :
+1. ```from sqlalchemy import *``` : mengimport library sqlalchemy, yang berfungsi untuk menghubungkan python dengan database
+2. ```db_username = '<<username>>'``` : mendeklarasikan variabel db_username untuk menyimpan username yang digunakan untuk login ke database
+3. ```db_host = '<<alamat database>>'``` : mendeklarasikan variabel db_host untuk menyimpan alamat database (bisa localhost/IP)
+4. ```db_name = '<<nama_database>>'``` : mendeklarasikan variabel db_name untuk menyimpan nama database di mana kita akan membuat schema
+5. ```engine = create_engine(f'mysql://{db_username}@{db_host}/{db_name}')``` : mendefinisikan jenis database yang akan dipakai, yaitu mysql, dan memasukkan username database, alamat database, dan password database
+6. ```metadata_obj = MetaData(engine)``` : membuat object untuk menyimpan metadata dari database
+7. ```metadata_obj.drop_all()``` : drop semua table yang ada di metadata yang dipakai
+8. ```Table('Kota', metadata_obj,``` : membuat tabel bernama 'Kota'
+9. ```Column('id', Integer, primary_key=True),``` : membuat kolom id dengan tipe integer dan dijadikan sebagai primary key
+10. ```Column('nama', String(255)),```  : membuat kolom nama dengan tipe string dan panjang string adalah 255
+11. ```Column('id_kota', Integer, ForeignKey("Kota.id"), nullable=false),``` : membuat kolom id_kota dengan tipe integer, dengan foreign key pada kolom id di tabel Kota, dan nilainya tidak dapat null
+12. Untuk baris lainnya kurang lebih sama dengan penjelasan nomor 8-12
+
+<br><br>
+**generate-all.py**
+```python
+import importlib
+
+# filenames
+files = [
+    'generate-kota',
+    'generate-siswa',
+    'generate-mata-pelajaran',
+    'generate-soal',
+    'generate-jawaban',
+]
+
+# execute each file (pake importlib)
+for file in files:
+    importlib.import_module(file)
 ```
 
 ## 5. Query Nilai Siswa dari Big Data
