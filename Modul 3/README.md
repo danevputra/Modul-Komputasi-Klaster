@@ -132,35 +132,33 @@ Apabila melakukan koneksi melalui SSH hanya diberikan tampilan terminal, apabila
 Dikarenakan Raspberry yang berada di lab KCKS yang menggunakan jaringan dari ITS, maka untuk melakukan koneksi SSH diperlukan VPN dan juga one-time-password yang bisa didapatkan dari website my.its.ac.id **(jika langsung melakukan praktikum di laboratorium, maka tidak perlu melakukan hal berikut, cukup sambungkan internet anda dengan internet laboratorium)**
 
 1. Masuk dan Login ke my.its.ac.id
-2. Masuk ke bagian One-time-password<br><br><img src= "img/11.png"><br><br>
-3. Pilih Tambah Akses VPN<br><br><img src= "img/12.png"><br><br>
+2. Masuk ke bagian One-time-password<br><br><img src= "img/11.png" style="height:300px;width:auto"><br><br>
+3. Pilih Tambah Akses VPN<br><br><img src= "img/12.png" style="height:150px;width:auto"><br><br>
 4. Download Konfigurasi OpenVPN (my.its.ac.id)<br><br><img src= "img/13.png"><br><br>
 5. Download OpenVPN di sini ([Download](https://openvpn.net/community-downloads/))
 6. Import konfigurasi OpenVPN <br><br><img src= "img/14.png"><br><br>
 7. Maka VPN siap digunakan <br><br><img src= "img/15.png"><br><br>
 
 ### Install MariaDB
-Karena mau menggunakan SQL maka harus install SQL service, disini menggunakan MariaDB
+Karena kita akan menggunakan SQL maka kira harus menginstall MariaDB terlebih dahulu, dan berikut adalah caranya :
 
-1. sudo apt update
-2. sudo apt-get install mariadb-server
-3. sudo mysql_secure_installation
-4. sudo mariadb --version (jika berjalan maka mariadb sudah terinstall)
-5. Jalankan commands
-```bash
-cd /var/lib/mysql
-ls
-rm -r *
-mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-systemctl restart mysqld
-systemctl restart mysql.service
-systemctl restart mariadb
-mysql -uroot
-CREATE USER 'klaster'@'%' IDENTIFIED BY 'Klaster123';
-GRANT ALL ON *.* TO 'cluster'@'%';
-FLUSH PRIVILEGES;
-quit;
-```
+1. Mulai dari titik ini hingga selanjutnya, disarankan untuk mengakses raspberry sebagai root dengan command ```sudo -i```
+2. apt-get update : digunakan untuk mengupdate package pada raspberry
+3. apt-get install mariadb-server : digunakan untuk 
+4. mysql_secure_installation : digunakan untuk
+5. mariadb --version : digunakan untuk memeriksa apakah mariadb sudah terinstall
+6. cd /var/lib/mysql : untuk masuk ke folder di mana mysql diinstall
+7. ls : melakukan listing file apa saja yang ada dalam folder
+8. rm -r * : hapus semua file dalam folder (karena kita akan melakukan install ulang)
+9. mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql : untuk menginstall ulang mysql (jika tidak diinstall ulang biasanya akan ada masalah, yaitu database ter-reset sendiri)
+10. systemctl restart mysqld : melakukan restart terhadap service mysqld
+11. systemctl restart mysql.service : melakukan restart terhadap service mysql.service
+12. systemctl restart mariadb : melakukan restart terhadap service mariadb
+13. mysql -uroot : masuk ke service mysql dengan username root
+14. CREATE USER '<<username>>'@'localhost' IDENTIFIED BY '<<password>>'; : membuat user baru yang melakukan listen ke localhost
+15. GRANT ALL ON *.* TO '<<username>>'@'localhost'; : Memberikan semua privilege ke user baru
+16. FLUSH PRIVILEGES; : reload grant table
+17. quit; : keluar dari service mysql
 
 ### Install Python
 Untuk menjalankan program script yang diberikan oleh Bapak Dwi, diperlukan python maka dilakukan installasi python
