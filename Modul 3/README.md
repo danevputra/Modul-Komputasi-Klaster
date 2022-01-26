@@ -132,12 +132,12 @@ Apabila melakukan koneksi melalui SSH hanya diberikan tampilan terminal, apabila
 Dikarenakan Raspberry yang berada di lab KCKS yang menggunakan jaringan dari ITS, maka untuk melakukan koneksi SSH diperlukan VPN dan juga one-time-password yang bisa didapatkan dari website my.its.ac.id **(jika langsung melakukan praktikum di laboratorium, maka tidak perlu melakukan hal berikut, cukup sambungkan internet anda dengan internet laboratorium)**
 
 1. Masuk dan Login ke my.its.ac.id
-2. Masuk ke bagian One-time-password
-3. Pilih Tambah Akses VPN
-4. Download Konfigurasi OpenVPN (my.its.ac.id)
-5. Download OpenVPN
-6. Import konfigurasi OpenVPN 
-7. Selesai
+2. Masuk ke bagian One-time-password<br><br><img src= "img/11.png"><br><br>
+3. Pilih Tambah Akses VPN<br><br><img src= "img/12.png"><br><br>
+4. Download Konfigurasi OpenVPN (my.its.ac.id)<br><br><img src= "img/13.png"><br><br>
+5. Download OpenVPN di sini ([Download](https://openvpn.net/community-downloads/))
+6. Import konfigurasi OpenVPN <br><br><img src= "img/14.png"><br><br>
+7. Maka VPN siap digunakan <br><br><img src= "img/15.png"><br><br>
 
 ### Install MariaDB
 Karena mau menggunakan SQL maka harus install SQL service, disini menggunakan MariaDB
