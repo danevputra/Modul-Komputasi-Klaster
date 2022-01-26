@@ -213,14 +213,14 @@ total_soal = config.total_soal
 id = 0
 
 f = open("csv/jawaban.csv", "w")
-writer = csv.writer(f)
+writer = csv.writer(f, doublequote=True, quoting=csv.QUOTE_ALL, lineterminator="\n")
 header = ["id", "id_siswa", "id_soal", "jawaban"]
 writer.writerow(header)
 
 for idx_siswa in range(total_siswa):
-    id += 1
     id_siswa = idx_siswa + 1
     for idx_soal in range(total_soal):
+        id += 1
         id_soal = idx_soal + 1
         jawaban = fake.random_element(elements=config.pilihan_jawaban)
         writer.writerow([id, id_siswa, id_soal, jawaban])
@@ -237,7 +237,7 @@ Penjelasan :
 7. ```total_soal = config.total_soal``` : mendeklarasikan variabel total_soal yang nilainya sama dengan total_soal yang sudah dideklarasikan pada file config.py
 8. ```id = 0``` : mendeklarasikan variabel id yang nantinya digunakan untuk mengisi kolom id sebagai primary key
 9. ```f = open("csv/jawaban.csv", "w")``` : membuka/membuat(jika belum ada) file jawaban.csv yang berada di dalam folder csv dengan metode write("w")
-10. ```writer = csv.writer(f)``` : mendeklarasikan variabel writer dengan isi fungsi writer dari library csv di mana nantinya fungsi ini akan menuliskan outputnya pada file csv/jawaban.csv
+10. ```writer = csv.writer(f, doublequote=True, quoting=csv.QUOTE_ALL, lineterminator="\n")``` : mendeklarasikan variabel writer dengan isi fungsi writer dari library csv di mana nantinya fungsi ini akan menuliskan outputnya pada file csv/jawaban.csv, ```doublequote=True``` berfungsi untuk melakukan escape jika dalam isi string juga terdapat tanda petik, ```quoting=csv.QUOTE_ALL``` berfungsi untuk memberikan tanda petik pada tiap kolom, dan ```lineterminator="\n"``` berfungsi untuk mengakhiri line dengan karakter ```\n```
 11. ```header = ["id", "id_siswa", "id_soal", "jawaban"]``` : variabel header yang memuat nama-nama kolom
 12. ```writer.writerow(header)``` : menuliskan header pada file csv
 13. ```for idx_siswa in range(total_siswa):``` : fungsi loop untuk menjalankan program sebanyak total_siswa yang sudah dideklarasikan
@@ -259,7 +259,7 @@ import config
 f = open('csv/kota.csv', 'w')
 
 # inisiasi `writer` dari csv untuk dapat menulis kedalam file csv
-writer = csv.writer(f)
+writer = csv.writer(f, doublequote=True, quoting=csv.QUOTE_ALL, lineterminator="\n")
 
 # header yang akan ditulis (berupa list)
 header = ['id', 'nama']
@@ -271,7 +271,7 @@ id = 0
 
 # looping untuk menulis data ke file csv
 for _kota in config.kota:
-    id = id + 1
+    id += 1
 
     # tulis baris ke file csv
     writer.writerow([id,_kota])
@@ -290,12 +290,12 @@ import csv
 import config
 
 f = open('csv/mata_pelajaran.csv', 'w')
-writer = csv.writer(f)
+writer = csv.writer(f, doublequote=True, quoting=csv.QUOTE_ALL, lineterminator="\n")
 
 header = ['id', 'nama']
 writer.writerow(header)
 
-id = 1
+id = 0
 for _mapel in config.mata_pelajaran:
     id = id + 1
     writer.writerow([id,_mapel])
@@ -328,7 +328,7 @@ total_siswa = config.total_siswa
 id = 0
 
 f = open("csv/siswa.csv", "w")
-writer = csv.writer(f)
+writer = csv.writer(f, doublequote=True, quoting=csv.QUOTE_ALL, lineterminator="\n")
 header = ["id", "id_kota", "nrp", "nama"]
 
 writer.writerow(header)
@@ -344,8 +344,6 @@ for idx_kota in range(total_kota):
         nama = fake.name()
         row = [id, id_kota, nrp, nama]
         writer.writerow(row)
-
-f.close()
 ```
 Penjelasan (untuk line yang sama dengan file sebelumnya tidak dijelaskan ulang) :
 1. ```total_kota = len(config.kota)``` : mendefinisikan variabel total_kota yang menampung nilai panjang kota yang didefinisikan pada file config.py
@@ -370,7 +368,7 @@ total_soal = config.total_soal
 id = 0
 
 f = open("csv/soal.csv", "w")
-writer = csv.writer(f, doublequote=True, quoting=csv.QUOTE_ALL)
+writer = csv.writer(f, doublequote=True, quoting=csv.QUOTE_ALL, lineterminator="\n")
 header = ["id", "id_mapel", "body", "pilihan_jawaban", "jawaban_benar"]
 writer.writerow(header)
 
@@ -395,8 +393,7 @@ for idx_mapel in range(total_mapel):
 f.close()
 ```
 Penjelasan (untuk line yang sama dengan file sebelumnya tidak dijelaskan ulang) :
-1. ```writer = csv.writer(f, doublequote=True, quoting=csv.QUOTE_ALL)``` : sebenarnya ini sama dengan file-file sebelummnya, hanya saja karena kita akan membuat soal dengan tipe string yang kemungkinan akan mengandung tanda petik, maka kita harus melakukan escape terhadap tanda petik tesebut dengan cara doublequote=True, sedangkan quoting=csv.QUOTE_ALL digunakan untuk memberikan tanda petik pada setiap data, tidak peduli apakah itu angka, string, dan lain sebagainya.
-2. ```header = ["id", "id_mapel", "body", "pilihan_jawaban", "jawaban_benar"]``` : header yang akan dihasilkan oleh program ini adalah id, id_mapel, body, pilihan_jawaban, jawaban_benar
+1. ```header = ["id", "id_mapel", "body", "pilihan_jawaban", "jawaban_benar"]``` : header yang akan dihasilkan oleh program ini adalah id, id_mapel, body, pilihan_jawaban, jawaban_benar
 3. ```body = fake.paragraph(nb_sentences=2)``` : menggunakan faker untuk melakukan generate isi soal dengan maksimal panjang string adalah 200 karakter
 4. ```pilihan_jawaban = dict()``` : membuat dictionary, dalam python dictionary adalah sebuah object yang berbentu seperti berikut ```dict(name = "John", age = 36, country = "Norway")```
 5. ```pilihan_jawaban[pilihan] = fake.paragraph(nb_sentences=1)``` : merandom isi dari pilihan jawaban dengan maksimal 100 karakter
