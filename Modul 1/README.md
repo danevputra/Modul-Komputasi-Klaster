@@ -505,9 +505,11 @@ Tujuan dari program ini adalah menjalankan semua file yang lain (kecuali generat
 12. Maka pada tabel, kita akan mendapatkan data yang sudah terisi<br><br><img src= "img/24.JPG"><br><br>
 
 ## 5. Query Nilai Siswa dari Big Data
-Dari data tersebut kita akan mencoba untuk mencari relasi antara id siswa, nama siswa, nrp, id mapel, dan nilai
-1. Agar kita tidak perlu melakukan join setiap saat maka kita dapat membuat view, dengan query sebagai berikut <br> ```CREATE VIEW soal_jawaban AS SELECT Jawaban.id_siswa, Siswa.nama, Siswa.nrp, Siswa.id_kota, Jawaban.value, Soal.jawaban_benar, Soal.id_mapel FROM Jawaban INNER JOIN Soal on Jawaban.id_soal = Soal.id INNER JOIN Siswa ON Jawaban.id_siswa = Siswa.id;```
-2. Maka kita akan mendapatkan sebuah tabel baru bernama soal_jawaban yang dapat kita olah lagi menjadi nilai dengan cara sebagai berikut
+Dari data tersebut kita akan mencoba untuk mengolah nilai yang didapatkan oleh tiap siswa dengan cara sebagai berikut :
+1. Buat sebuah tabel baru bernama nilai dengan kolom sebagai berikut<br><br><img src= "img/25.JPG" style="height:300px,width:auto"><br><br>
+2. Jalankan query berikut untuk mendapatkan nilai dari tiap siswa<br><br><img src= "img/26.JPG"><br><br>```INSERT INTO nilai SELECT kota.nama, jawaban.id_siswa, COUNT(jawaban.id) as jml_benar, soal.id_mapel, siswa.nama FROM jawaban INNER JOIN soal ON jawaban.id_soal=soal.id INNER JOIN siswa ON jawaban.id_siswa = siswa.id INNER JOIN kota ON siswa.id_kota=kota.id WHERE jawaban.jawaban = soal.jawaban_benar GROUP BY jawaban.id_siswa, soal.id_mapel;```
+3. Maka kita akan mendapatkan nilai dari tiap siswa<br><br><img src= "img/27.JPG" style="height:300px,width:auto"><br><br>
+
 ## Referensi
 https://idcloudhost.com/kamus-hosting/query/ <br>
 https://www.dicoding.com/blog/apa-itu-database/ <br>
