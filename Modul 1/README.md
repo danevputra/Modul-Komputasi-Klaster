@@ -505,13 +505,13 @@ Tujuan dari program ini adalah menjalankan semua file yang lain (kecuali generat
 12. Maka pada tabel, kita akan mendapatkan data yang sudah terisi<br><br><img src= "img/24.JPG"><br><br>
 
 ## 5. Query Nilai Siswa dari Big Data
-Dari data tersebut kita akan mencoba untuk mengolah nilai yang didapatkan oleh tiap siswa dengan cara sebagai berikut :
+Dari data tersebut kita akan mencoba untuk mengolah jawaban sehingga kita mendapatkan jumlah jawaban yang benar dari tiap siswa dengan cara sebagai berikut :
 1. Buat sebuah tabel baru bernama nilai dengan kolom sebagai berikut<br><br><img src= "img/25.JPG" style="height:300px,width:auto"><br><br>
 2. Jalankan query berikut untuk mendapatkan nilai dari tiap siswa<br><br><img src= "img/26.JPG"><br><br>
 ```
 INSERT INTO nilai SELECT kota.nama, jawaban.id_siswa, COUNT(jawaban.id) as jml_benar, soal.id_mapel, siswa.nama FROM jawaban INNER JOIN soal ON jawaban.id_soal=soal.id INNER JOIN siswa ON jawaban.id_siswa = siswa.id INNER JOIN kota ON siswa.id_kota=kota.id WHERE jawaban.jawaban = soal.jawaban_benar GROUP BY jawaban.id_siswa, soal.id_mapel;
 ```
-3. Maka kita akan mendapatkan nilai dari tiap siswa<br><br><img src= "img/27.JPG" style="height:300px,width:auto"><br><br>
+3. Maka kita akan mendapatkan jumlah jawaban yang benar dari tiap siswa<br><br><img src= "img/27.JPG" style="height:300px,width:auto"><br><br>
 
 ## Referensi
 https://idcloudhost.com/kamus-hosting/query/ <br>
