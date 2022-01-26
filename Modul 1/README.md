@@ -491,12 +491,18 @@ Tujuan dari program ini adalah menjalankan semua file yang lain (kecuali generat
 
 <br><br>
 **Cara Menjalankan**
-1. Download file dari repository yang ada, bisa melalui command git clone atau langsung tekan tombol download di repository
-2. Pastikan XAMPP sudah menyala dan tekan tombol shell untuk masuk ke dalam shell
-3. Buat database dengan command ```mysql -u root -e "drop database if exists CBT_JATIM; create database CBT_JATIM;"```
-4. Generate Schema dengan command ```python generate-schema.py``` di command prompt
-5. Generate data dengan command ```python generate-all.py```
-6. Terakhir masukkan command ```mysql -u root < import-from-csv.sql``` di shell yang terbuka melalui XAMPP untuk mengimport csv ke mysql
+1. Download file dari repository yang ada, bisa melalui command git clone atau langsung tekan tombol download di repository<br><br><img src= "img/13.JPG"><br><br>
+2. Jika sudah terdownload maka kita akan mendapatkan file sebagai berikut<br><br><img src= "img/14.JPG"><br><br>
+3. Install library yang terdapat pada file requirements.txt dengan command ```pip install -r requirements.txt``` pada cmd<br><br><img src= "img/15.JPG"><br><br>
+4. Pastikan XAMPP sudah menyala dan tekan tombol shell untuk masuk ke dalam shell<br><br><img src= "img/16.JPG"><br><br>
+5. Buat database dengan command ```mysql -u root -e "drop database if exists CBT_JATIM; create database CBT_JATIM;"```<br><br><img src= "img/17.JPG"><br><br>
+6. Setelah itu pada phpmyadmin bisa kita lihat bahwa kita mendapatkan sebuah database baru bernama CBT_JATIM<br><br><img src= "img/18.JPG"><br><br>
+7. Generate Schema dengan command ```python generate-schema.py``` di command prompt<br><br><img src= "img/19.JPG"><br><br>
+8. Setelah itu kita akan mendapati bahwa di database CBT_JATIM akan muncul beberapa tabel baru<br><br><img src= "img/20.JPG"><br><br>
+9. Generate data dengan command ```python generate-all.py```<br><br><img src= "img/21.JPG"><br><br>
+10. Maka pada folder csv kita mendapatkan beberapa file csv<br><br><img src= "img/22.JPG"><br><br>
+11. Terakhir masukkan command ```mysql -u root < import-from-csv.sql``` di shell yang terbuka melalui XAMPP untuk mengimport csv ke mysql<br><br><img src= "img/23.JPG"><br><br>
+12. Maka pada tabel, kita akan mendapatkan data yang sudah terisi<br><br><img src= "img/24.JPG"><br><br>
 
 ## 5. Query Nilai Siswa dari Big Data
 Dari data tersebut kita akan mencoba untuk mencari relasi antara id siswa, nama siswa, nrp, id mapel, dan nilai
