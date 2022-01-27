@@ -43,10 +43,10 @@ warnings.filterwarnings("ignore")
 def loadDB(id_kota):
     t = time.time()
     try:
-        mydb = connection.connect(host="Localhost",
+        mydb = connection.connect(host="localhost",
                                   database='CBT_JATIM',
-                                  user="klaster",
-                                  password="Klaster123", use_pure=True)
+                                  user="root",
+                                  password="", use_pure=True)
 
         query = 'select id_siswa, nama, nrp, jawaban, jawaban_benar, id_mapel from soal_jawaban where id_kota=%d;' % id_kota
         ujian_siswa = pd.read_sql(query, mydb)
@@ -58,8 +58,7 @@ def loadDB(id_kota):
 
     elapsed = time.time() - t
     print("Time Load DB  = {:.3f}".format(elapsed))
-    ujian_siswa.loc[ujian_siswa['value'] ==
-                    ujian_siswa['jawaban_benar'], ['score']] = 1
+    ujian_siswa.loc[ujian_siswa['jawaban'] == ujian_siswa['jawaban_benar'], ['score']] = 1
     ujian_siswa = ujian_siswa.fillna(0)
     result = ujian_siswa.groupby(['id_siswa', 'nama', 'nrp', 'id_mapel'])['score'].agg('sum')
     result.to_csv("id_kota_%d.csv" % id_kota)
@@ -99,7 +98,7 @@ Penjelasan :
 16. ```print(str(e))``` : menampilkan pesan error
 17. ```elapsed = time.time() - t``` : menghitung waktu yang dibutuhkan untuk load data dari database dengan cara mengurangi waktu saat ini dengan waktu yang ada di variabel t
 18. ```print("Time Load DB  = {:.3f}".format(elapsed))``` : Menampilkan waktu yang diperlukan untuk melakukan load database
-19. ```ujian_siswa.loc[ujian_siswa['value'] == ujian_siswa['jawaban_benar'], ['score']] = 1``` : apabila ```ujian_siswa['value']``` yang merupakan jawaban dari siswa sama dengan ```ujian_siswa['jawaban_benar']``` yang merupakan kunci jawaban, maka nilai ```score``` dijadikan 1
+19. ```ujian_siswa.loc[ujian_siswa['jawaban'] == ujian_siswa['jawaban_benar'], ['score']] = 1``` : apabila ```ujian_siswa['jawaban']``` yang merupakan jawaban dari siswa sama dengan ```ujian_siswa['jawaban_benar']``` yang merupakan kunci jawaban, maka nilai ```score``` dijadikan 1
 20. ```ujian_siswa = ujian_siswa.fillna(0)``` : fungsi ini bertujuan untuk mengubah field yang null menjadi angka 0, adanya field yang null ini akibat jawaban dari siswa salah
 21. ``` result = ujian_siswa.groupby(['id_siswa', 'nama', 'nrp', 'id_mapel'])['score'].agg('sum')``` : bertujuan untuk melakukan grouping (setelah penilaian selesai maka jumlah skor dari siswa akan ditambahkan dan pada akhirnya akan mendapatkan nilai dari siswa tersebut)
 22. ```result.to_csv("id_kota_%d.csv" % id_kota)``` : berfungsi untuk mencetak hasil ke dalam file csv dengan nama file sesuai id kota yang sedang di query
@@ -120,8 +119,8 @@ CREATE VIEW soal_jawaban AS SELECT jawaban.id_siswa, siswa.nama, siswa.nrp, sisw
 ```
 <br><br><img src= "img/47.JPG"><br><br>
 2. Maka kita akan mendapati sebuah views bernama soal_jawaban<br><br><img src= "img/48.JPG"><br><img src= "img/49.JPG"><br><br>
-3. Jika sudah maka kita dapat menjalankan programnya dengan command (di cmd) ```python <<namafile>>.py```<br><br><img src= "img/48.JPG"><br><img src= "img/49.JPG"><br><br>
-4. Maka kita akan mendapatkan file csv yang berisi nilai dari kota yang kita proses<br><br><img src= "img/48.JPG"><br><img src= "img/49.JPG"><br><br>
+3. Jika sudah maka kita dapat menjalankan programnya dengan command (di cmd) ```python <<namafile>>.py```<br><br><img src= "img/50.JPG"><br><br>
+4. Maka kita akan mendapatkan file csv yang berisi nilai dari kota yang kita proses<br><br><img src= "img/51.JPG"><br><img src= "img/52.JPG"><br><br>
 
 ## Mengolah Nilai dengan Raspberry
 
