@@ -152,7 +152,7 @@ Karena kita akan menggunakan SQL maka kira harus menginstall MariaDB terlebih da
 8. ```rm -r *``` : hapus semua file dalam folder (karena kita akan melakukan install ulang)<br><br><img src= "img/22.png"><br><br>
 9. ```mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql``` : untuk menginstall ulang mysql (jika tidak diinstall ulang biasanya akan ada masalah, yaitu database ter-reset sendiri)<br><br><img src= "img/23.png"><br><br>
 10. ```systemctl restart mysqld``` : melakukan restart terhadap service mysqld<br><br><img src= "img/24.png"><br><br>
-11. ```systemctl restart mysql.service``` : melakukan restart terhadap service mysql.service<br><br><img src= "img/25png"><br><br>
+11. ```systemctl restart mysql.service``` : melakukan restart terhadap service mysql.service<br><br><img src= "img/25.png"><br><br>
 12. ```systemctl restart mariadb``` : melakukan restart terhadap service mariadb<br><br><img src= "img/26.png"><br><br>
 13. ```mysql -uroot``` : masuk ke service mysql dengan username root<br><br><img src= "img/27.png"><br><br>
 14. ```CREATE USER '<<username>>'@'localhost' IDENTIFIED BY '<<password>>';``` : membuat user baru yang melakukan listen ke localhost<br><br><img src= "img/28.png"><br><br>
