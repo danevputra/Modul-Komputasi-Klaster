@@ -180,13 +180,21 @@ Install library yang diperlukan dengan command :
 ### Download Database
 
 1. Download database dari google drive dengan command sebagai berikut<br><br>```wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1oIB6H7KsGQcz2OEVlVWD6oKttmCNsWk-' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1oIB6H7KsGQcz2OEVlVWD6oKttmCNsWk-" -O cbtjatimsm.tar.gz && rm -rf /tmp/cookies.txt```<br><br><img src= "img/37.png"><br><br>
-2. tar -xvf cbtjatimsm.tar.gz 
-3. Pindah ke root (sudo -i), 
-4. mv hasil export ke root
-5. Lalu melakukan import database yang telah didownload kedalam MariaDB server, ikuti langkah yang ada di Readme (Didalam hasil export cbtjatimsm.tar.gz)
+2. ```tar -xvf cbtjatimsm.tar.gz``` : untuk melakukan extract terhadap file tar.gz yang baru di download<br><br><img src= "img/38.png"><br><br>
+3. ```wget -O - pi.dk/3 || curl pi.dk/3/ ``` : Menginstall GNU Parallel untuk mengimport database<br><br><img src= "img/39.png"><br><img src= "img/40.png"><br><img src= "img/41.png"><br><br>
+4. ```mysql -u root``` : masuk ke dalam mysql server
+5. ```CREATE DATABASE CBT_JATIM ``` : membuat database bernama CBT_JATIM
+6. ```cd schema``` : masuk ke folder schema
+7. ```ls -A1 *.sql | parallel --joblog joblog.txt mysql -uroot CBT_JATIM "<"``` : mengimport schema ke dalam database CBT_JATIM<br><br><img src= "img/42.png"><br><br>
+8. Untuk tabel-tabel lain ulangi langkah nomor 6 dan 7, namun cd ke folder terkait, misal :
+```
+cd Jawaban
+ls -A1 *.sql | parallel --joblog joblog.txt mysql -uroot - CBT_JATIM "<"
+``` 
+<br><br><img src= "img/43.png"><br><img src= "img/44.png"><br><br>
 
 ### Menjalankan Program Python
-Jika sudah berhasil melakukan semua langkah, terakhir jalankan program berikut ([program pengolahan nilai](#program-python)) dengan command ```python3 <<namaprogram>>.py``` **JANGAN LUPA BUAT VIEW DI DATABASE**
+Jika sudah berhasil melakukan semua langkah, terakhir jalankan program berikut ([program pengolahan nilai](#program-python)) dengan command ```python3 <<namaprogram>>.py``` **JANGAN LUPA BUAT VIEW DI DATABASE**<br><br><img src= "img/45.png"><br><img src= "img/46.png"><br><br>
 
 ## Referensi
 https://www.wartaekonomi.co.id/read366664/apa-itu-bahasa-pemrograman-python<br>
