@@ -511,7 +511,24 @@ Dari data tersebut kita akan mencoba untuk mengolah jawaban sehingga kita mendap
 ```sql
 INSERT INTO nilai SELECT kota.nama, jawaban.id_siswa, COUNT(jawaban.id) as jml_benar, soal.id_mapel, siswa.nama FROM jawaban INNER JOIN soal ON jawaban.id_soal=soal.id INNER JOIN siswa ON jawaban.id_siswa = siswa.id INNER JOIN kota ON siswa.id_kota=kota.id WHERE jawaban.jawaban = soal.jawaban_benar GROUP BY jawaban.id_siswa, soal.id_mapel;
 ```
-3. Maka kita akan mendapatkan jumlah jawaban yang benar dari tiap siswa<br><br><img src= "img/27.JPG" style="height:300px,width:auto"><br><br>
+Penjelasan :
+- ```INSERT INTO nilai``` : Memasukkan data ke dalam tabel nilai
+- ```SELECT``` : memilih data (nantinya hasil select ini akan di insert ke dalam tabel nilai)
+- ```kota.nama``` : memilih kolom nama pada tabel kota
+- ```jawaban.id_siswa``` : memilih kolom id_siswa dari tabel jawaban
+- ```COUNT(jawaban.id) as jml_benar``` : menghitung jumlah id_jawaban yang ada dan menyimpannya dengan nama jml_benar
+- ```soal.id_mapel``` : memilih kolom id_mapel pada tabel soal
+- ```siswa.nama``` : memilih kolom nama pada tabel siswa
+- ```FROM jawaban``` : mengambil data dari kolom jawaban
+- ```INNER JOIN soal``` : menggabungkan dengan tabel soal menggunakan metode INNER JOIN
+- ```ON jawaban.id_soal=soal.id``` : untuk menggabungkan tabel jawaban pada kolom id_soal dan tabel soal pada kolom id
+- ```INNER JOIN siswa``` : menggabungkan dengan tabel siswa
+- ```ON jawaban.id_siswa = siswa.id``` : menggabungkan tabel jawaban pada kolom id_siswa dan tabel siswa pada kolom id
+- ```INNER JOIN kota``` : menggabungkan dengan tabel kota
+- ```ON siswa.id_kota=kota.id``` : menggabungkan tabel siswa pada kolom id_kota dan tabel kota pada kolom id
+- ```WHERE jawaban.jawaban = soal.jawaban_benar``` : Hanya lakukan select pada data yang memiliki nilai yang sama pada tabel jawaban kolom jawaban dan tabel soal kolom jawaban_benar
+- ```GROUP BY jawaban.id_siswa, soal.id_mapel``` : grouping data berdasarkan tabel jawaban kolom id_siswa dan tabel soal kolom id_mapel
+7. Maka kita akan mendapatkan jumlah jawaban yang benar dari tiap siswa<br><br><img src= "img/27.JPG" style="height:300px,width:auto"><br><br>
 
 ## Referensi
 https://idcloudhost.com/kamus-hosting/query/ <br>
