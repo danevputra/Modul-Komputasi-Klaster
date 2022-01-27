@@ -113,6 +113,13 @@ Penjelasan :
 30. ```elapsed = time.time() - tAll``` : untuk menghitung waktu yang diperlukan dalam menjalankan program
 31. ```print("Time selesai  = {:.3f}".format(elapsed))``` : print waktu yang diperlukan untuk menjalankan program
 
+### Menjalankan program
+1. Sebelum menjalankan program kita perlu membuat view pada database terlebih dahulu, tujuannya agar kita tidak perlu melakukan inner join berkali-kali, dan kita dapat melakukan select secara langsung terhadap tabel yang sudah di join
+```sql
+CREATE VIEW soal_jawaban AS SELECT jawaban.id_siswa, siswa.nama, siswa.nrp, siswa.id_kota, jawaban.jawaban, soal.jawaban_benar, soal.id_mapel FROM jawaban INNER JOIN soal ON jawaban.id_soal = soal.id INNER JOIN siswa ON jawaban.id_siswa = siswa.id;
+```
+2. aa
+
 ## Mengolah Nilai dengan Raspberry
 
 ### Instalasi VnC
