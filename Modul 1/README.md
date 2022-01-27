@@ -51,6 +51,8 @@ Pengertian Query adalah kemampuan untuk menampilkan data dari database untuk dio
         Kekurangan selanjutnya dari MongoDB yang satu ini sering membuat penggunanya kerepotan. Pasalnya, ukuran data yang bisa digunakan hanya dibatasi sebesar 16 MB dalam setiap dokumennya. Selain itu, performa nesting untuk dokumen juga dibatasi hanya 100 per levelnya.
     - Masalah dalam pengindeksan<br>
         MongoDB memang menawarkan kinerja dengan kecepatan yang tinggi. Namun, hal itu bisa terjadi jika indeks yang dilakukan tepat. Melansir dari Virtual-DBA, saat indeks yang diimplementasikan kurang tepat, maka performa MongoDB akan berjalan lambat. Memperbaiki kesalahan dalam indeks juga memakan waktu, sehingga masalah dalam pengindeksan ini juga menjadi kekurangan dari MongoDB.
+    
+    MongoDB vs SQL<br><br><img src= "https://miro.medium.com/max/1024/0*zohtJjaiALFT_KF8.png" style="height:90px;width:auto"><br><br>
         
 4. Postgre SQL<br><br><img src= "https://niagaspace.sgp1.digitaloceanspaces.com/blog/wp-content/uploads/2021/10/27194447/postgresql-adalah-1024x428.png" style="height:90px;width:auto"><br><br>
     PostgreSQL adalah sebuah sistem basis data yang disebarluaskan secara bebas menurut Perjanjian lisensi BSD. Peranti lunak ini merupakan salah satu basis data yang paling banyak digunakan saat ini, selain MySQL dan Oracle. PostgreSQL menyediakan fitur yang berguna untuk replikasi basis data. Fitur-fitur yang disediakan PostgreSQL antara lain DB Mirror, PGPool, Slony, PGCluster, dan lain-lain.<br><br>
