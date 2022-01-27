@@ -118,7 +118,10 @@ Penjelasan :
 ```sql
 CREATE VIEW soal_jawaban AS SELECT jawaban.id_siswa, siswa.nama, siswa.nrp, siswa.id_kota, jawaban.jawaban, soal.jawaban_benar, soal.id_mapel FROM jawaban INNER JOIN soal ON jawaban.id_soal = soal.id INNER JOIN siswa ON jawaban.id_siswa = siswa.id;
 ```
-2. aa
+<br><br><img src= "img/47.JPG"><br><br>
+2. Maka kita akan mendapati sebuah views bernama soal_jawaban<br><br><img src= "img/48.JPG"><br><img src= "img/49.JPG"><br><br>
+3. Jika sudah maka kita dapat menjalankan programnya dengan command (di cmd) ```python <<namafile>>.py```<br><br><img src= "img/48.JPG"><br><img src= "img/49.JPG"><br><br>
+4. Maka kita akan mendapatkan file csv yang berisi nilai dari kota yang kita proses<br><br><img src= "img/48.JPG"><br><img src= "img/49.JPG"><br><br>
 
 ## Mengolah Nilai dengan Raspberry
 
