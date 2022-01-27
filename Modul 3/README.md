@@ -48,7 +48,7 @@ def loadDB(id_kota):
                                   user="klaster",
                                   password="Klaster123", use_pure=True)
 
-        query = 'select id_siswa, nama, nrp, value, jawaban_benar, id_mapel from soal_jawaban where id_kota=%d;' % id_kota
+        query = 'select id_siswa, nama, nrp, jawaban, jawaban_benar, id_mapel from soal_jawaban where id_kota=%d;' % id_kota
         ujian_siswa = pd.read_sql(query, mydb)
 
         mydb.close()  # close the connection
@@ -92,7 +92,7 @@ Penjelasan :
 9. ```t = time.time()``` : berfungsi sebagai pencatat waktu awal, ketika program memasuki fungsi loadDB()
 10. ```try:``` dan ```except Exception as e:``` : pertama program akan mencoba untuk menjalankan code yang berada pada block try, namun jika ada error maka akan dilempar ke dalam code yang berada pada block except
 11. ```mydb = connection.connect(host="Localhost", database='(db name)', user="(username)", password="(password)", use_pure=True)``` : berfungsi untuk menghubungkan program ke mysql server dengan database, username, dan password yang tersedia
-12. ```query = 'select id_siswa, nama, nrp, value, jawaban_benar, id_mapel from soal_jawaban where id_kota=%d;' % id_kota``` : merupakan query yang akan kita jalankan pada database, untuk ```%d``` dan ```%id_kota``` berarti query ini akan mengikuti berapa id_kota yang dimasukkan sebagai parameter pada fungsi loadDB()
+12. ```query = 'select id_siswa, nama, nrp, jawaban, jawaban_benar, id_mapel from soal_jawaban where id_kota=%d;' % id_kota``` : merupakan query yang akan kita jalankan pada database, untuk ```%d``` dan ```%id_kota``` berarti query ini akan mengikuti berapa id_kota yang dimasukkan sebagai parameter pada fungsi loadDB()
 13. ```ujian_siswa = pd.read_sql(query, mydb)``` : berfungsi untuk menjalankan query pada database, menggunakan library pandas, dan hasilnya disimpan ke dalam variabel ujian_siswa
 14. ```mydb.close()``` : menutup koneksi ke database
 15. ```except Exception as e:``` : apabila terdapat error pada block try maka program akan masuk ke sini
