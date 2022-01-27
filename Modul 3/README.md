@@ -163,34 +163,30 @@ Karena kita akan menggunakan SQL maka kira harus menginstall MariaDB terlebih da
 ### Install Python
 Untuk menjalankan program script yang diberikan oleh Bapak Dwi, diperlukan python maka dilakukan installasi python
 
-1. sudo apt-get update
-2. sudo apt-get install python3.9 python3-pip
-3. sudo python --version (jika berjalan maka python berhasil diinstall)
-4. sudo pip --version (jika berjalan maka pip berhasil diinstall)
+1. ```apt-get update``` : digunakan untuk mengupdate package pada raspberry<br><br><img src= "img/16.png"><br><br>
+2. ```apt-get install python3.9 python3-pip``` : digunakan untuk menginstall python 3.9 dan pip 3
+3. ```python --version```  : untuk memeriksa versi python, jika berjalan maka python berhasil diinstall<br><br><img src= "img/30.png"><br><br>
+4. ```pip --version``` : untuk memeriksa versi pip, jika berjalan maka pip berhasil diinstall<br><br><img src= "img/31.png"><br><br>
 
 ### Install Library tambahan
 
 Install library yang diperlukan dengan command :
 
-1. pip3 install bounded-pool-executor
-2. pip3 install mysql-connector-python
-3. pip3 install pandas
-4. pip3 install psutil
+1. ```pip3 install bounded-pool-executor``` : bounded-pool-executor merupakan sebuah library pada python yang memungkinkan kita untuk menjalankan proses secara parallel dengan memanfaatkan sumber daya yang ada pada komputer semaksimal mungkin.<br><br><img src= "img/32.png"><br><br>
+2. ```pip3 install mysql-connector-python``` : mysql-connector-python merupakan sebuah library pada python yang berfungsi untuk menghubungkan program dengan database (berkomunikasi).<br><br><img src= "img/33.png"><br><br>
+3. ```pip3 install pandas``` : pandas merupakan sebuah library pada python yang berfungsi untuk memanipulasi dan menganalisis data.<br><br><img src= "img/34.png"><br><img src= "img/35.png"><br><br>
+4. ```pip3 install psutil``` : psutil merupakan sebuah library pada python yang berfungsi untuk mendeteksi jumlah core pada processor.<br><br><img src= "img/36.png"><br><br>
 
 ### Download Database
-Untuk mendapatkan DB yang telah disiapkan maka perlu dilakukan download dari google drive dengan command 
 
-1. 
-```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1oIB6H7KsGQcz2OEVlVWD6oKttmCNsWk-' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1oIB6H7KsGQcz2OEVlVWD6oKttmCNsWk-" -O cbtjatimsm.tar.gz && rm -rf /tmp/cookies.txt
-```
+1. Download database dari google drive dengan command sebagai berikut<br><br>```wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1oIB6H7KsGQcz2OEVlVWD6oKttmCNsWk-' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1oIB6H7KsGQcz2OEVlVWD6oKttmCNsWk-" -O cbtjatimsm.tar.gz && rm -rf /tmp/cookies.txt```<br><br><img src= "img/37.png"><br><br>
 2. tar -xvf cbtjatimsm.tar.gz 
 3. Pindah ke root (sudo -i), 
 4. mv hasil export ke root
 5. Lalu melakukan import database yang telah didownload kedalam MariaDB server, ikuti langkah yang ada di Readme (Didalam hasil export cbtjatimsm.tar.gz)
 
 ### Menjalankan Program Python
-Jika sudah berhasil melakukan semua langkah, terakhir jalankan program berikut ([program pengolahan nilai](#program-python))
+Jika sudah berhasil melakukan semua langkah, terakhir jalankan program berikut ([program pengolahan nilai](#program-python)) dengan command ```python3 <<namaprogram>>.py```
 
 ## Referensi
 https://www.wartaekonomi.co.id/read366664/apa-itu-bahasa-pemrograman-python<br>
