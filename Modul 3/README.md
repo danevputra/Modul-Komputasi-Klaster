@@ -186,7 +186,7 @@ Install library yang diperlukan dengan command :
 5. Lalu melakukan import database yang telah didownload kedalam MariaDB server, ikuti langkah yang ada di Readme (Didalam hasil export cbtjatimsm.tar.gz)
 
 ### Menjalankan Program Python
-Jika sudah berhasil melakukan semua langkah, terakhir jalankan program berikut ([program pengolahan nilai](#program-python)) dengan command ```python3 <<namaprogram>>.py```
+Jika sudah berhasil melakukan semua langkah, terakhir jalankan program berikut ([program pengolahan nilai](#program-python)) dengan command ```python3 <<namaprogram>>.py``` **JANGAN LUPA BUAT VIEW DI DATABASE**
 
 ## Referensi
 https://www.wartaekonomi.co.id/read366664/apa-itu-bahasa-pemrograman-python<br>
