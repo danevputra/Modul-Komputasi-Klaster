@@ -143,22 +143,22 @@ Dikarenakan Raspberry yang berada di lab KCKS yang menggunakan jaringan dari ITS
 Karena kita akan menggunakan SQL maka kira harus menginstall MariaDB terlebih dahulu, dan berikut adalah caranya :
 
 1. Mulai dari titik ini hingga selanjutnya, disarankan untuk mengakses raspberry sebagai root dengan command ```sudo -i```
-2. apt-get update : digunakan untuk mengupdate package pada raspberry
-3. apt-get install mariadb-server : digunakan untuk 
-4. mysql_secure_installation : digunakan untuk
-5. mariadb --version : digunakan untuk memeriksa apakah mariadb sudah terinstall
-6. cd /var/lib/mysql : untuk masuk ke folder di mana mysql diinstall
-7. ls : melakukan listing file apa saja yang ada dalam folder
-8. rm -r * : hapus semua file dalam folder (karena kita akan melakukan install ulang)
-9. mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql : untuk menginstall ulang mysql (jika tidak diinstall ulang biasanya akan ada masalah, yaitu database ter-reset sendiri)
-10. systemctl restart mysqld : melakukan restart terhadap service mysqld
-11. systemctl restart mysql.service : melakukan restart terhadap service mysql.service
-12. systemctl restart mariadb : melakukan restart terhadap service mariadb
-13. mysql -uroot : masuk ke service mysql dengan username root
-14. CREATE USER '<<username>>'@'localhost' IDENTIFIED BY '<<password>>'; : membuat user baru yang melakukan listen ke localhost
-15. GRANT ALL ON *.* TO '<<username>>'@'localhost'; : Memberikan semua privilege ke user baru
-16. FLUSH PRIVILEGES; : reload grant table
-17. quit; : keluar dari service mysql
+2. ```apt-get update``` : digunakan untuk mengupdate package pada raspberry
+3. ```apt-get install mariadb-server``` : digunakan untuk 
+4. ```mysql_secure_installation``` : digunakan untuk
+5. ```mariadb --version``` : digunakan untuk memeriksa apakah mariadb sudah terinstall
+6. ```cd /var/lib/mysql``` : untuk masuk ke folder di mana mysql diinstall
+7. ```ls``` : melakukan listing file apa saja yang ada dalam folder
+8. ``rm -r *``` : hapus semua file dalam folder (karena kita akan melakukan install ulang)
+9. ```mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql``` : untuk menginstall ulang mysql (jika tidak diinstall ulang biasanya akan ada masalah, yaitu database ter-reset sendiri)
+10. ```systemctl restart mysqld``` : melakukan restart terhadap service mysqld
+11. ```systemctl restart mysql.service``` : melakukan restart terhadap service mysql.service
+12. ```systemctl restart mariadb``` : melakukan restart terhadap service mariadb
+13. ```mysql -uroot``` : masuk ke service mysql dengan username root
+14. ```CREATE USER '<<username>>'@'localhost' IDENTIFIED BY '<<password>>';``` : membuat user baru yang melakukan listen ke localhost
+15. ```GRANT ALL ON *.* TO '<<username>>'@'localhost';``` : Memberikan semua privilege ke user baru
+16. ```FLUSH PRIVILEGES;``` : reload grant table
+17. ```quit;``` : keluar dari service mysql
 
 ### Install Python
 Untuk menjalankan program script yang diberikan oleh Bapak Dwi, diperlukan python maka dilakukan installasi python
